@@ -3,3 +3,7 @@
     width: 1000px;
 }
 
+#optionsContainer{
+    display: flex;
+    margin-right: 80px;
+}
