@@ -140,6 +140,10 @@ function checkRoute(){
     setRoutes('WALKING');
 }
 
+function optionClicked(option){
+    setRoutes(option);
+}
+
 function setOption( option ){
     
     var request = {
@@ -188,4 +192,3 @@ function setRoutes(route){
          }
      });
 }
-

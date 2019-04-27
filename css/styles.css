@@ -5,5 +5,8 @@
 
 #optionsContainer{
     display: flex;
-    margin-right: 80px;
+}
+
+input{
+    width: 200px;
 }
