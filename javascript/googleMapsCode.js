@@ -1,5 +1,5 @@
 var map, infoWindow;
-
+var originLatitude = 0, originLongitute = 0, destinationLatitude = 0, destinationLongitute = 0;
 
 function initMap() {
 
@@ -20,16 +20,20 @@ function initMap() {
             
         var position = { lat: p.coords.latitude, lng: p.coords.longitude};
         
+        originLatitude = p.coords.latitude
+                                             
+		originLatitude = p.coords.latitude;
+		originLongitute = p.coords.longitude;
+		
+		destinationLatitude = 0, destinationLongitute = 0;
+		
         infoWindow.setPosition(position);
         infoWindow.setContent('Your location!');
         infoWindow.open(map);
         map.setCenter(position);
         
-        m = 2;
     });
     
-    console.log(m);
-    console.log("lol");
     var destinationInput = document.getElementById('destination');
     var destinationSearchBox = new google.maps.places.SearchBox(destinationInput);
     
