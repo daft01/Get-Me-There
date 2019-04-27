@@ -1,8 +1,12 @@
 var map, infoWindow;
-var originLatitude = 0, originLongitute = 0, destinationLatitude = 0, destinationLongitute = 0;
+var originLatLng, destinationLatLng;
+var originValid = false, destinationValid = false;
 
 function initMap() {
 
+    var directionsDisplay = new google.maps.DirectionsRenderer();
+    var directionsService = new google.maps.DirectionsService();
+    
     document.getElementById("useCurrentLocation").checked = true;
     
     var options = {
@@ -14,24 +18,14 @@ function initMap() {
     map = new google.maps.Map(document.getElementById('map'), options);
     infoWindow = new google.maps.InfoWindow;
     
-    var m;
-    
     navigator.geolocation.getCurrentPosition(function (p) {
             
         var position = { lat: p.coords.latitude, lng: p.coords.longitude};
+        originLatLng = position;
         
-        originLatitude = p.coords.latitude
-                                             
-		originLatitude = p.coords.latitude;
-		originLongitute = p.coords.longitude;
-		
-		destinationLatitude = 0, destinationLongitute = 0;
-		
         infoWindow.setPosition(position);
-        infoWindow.setContent('Your location!');
         infoWindow.open(map);
         map.setCenter(position);
-        
     });
     
     var destinationInput = document.getElementById('destination');
@@ -60,9 +54,15 @@ function initMap() {
         
         var p = places[0]
         
-        if(!p.geometry)
+        if(!p.geometry){
+                originValid = false;
                 return;
-                
+        }else{
+            originValid = true;
+        }
+            
+        originLatLng = {lat: p.geometry.location.lat(), lng: p.geometry.location.lng()};
+                                
         markers.push(new google.maps.Marker({
             map: map,
             title: p.name,
@@ -74,8 +74,8 @@ function initMap() {
         else
             bounds.extend(p.geometry.location);
         
-        
         map.fitBounds(bounds);
+        console.log(destinationLatLng);
     });
     
     destinationSearchBox.addListener("places_changed", function(){
@@ -91,9 +91,15 @@ function initMap() {
         
         var p = places[0]
         
-        if(!p.geometry)
-                return;
-                
+         if(!p.geometry){
+            destinationValid = false;
+            return;
+         }else{
+            destinationValid = true;
+         }
+        
+        destinationLatLng = {lat: p.geometry.location.lat(), lng: p.geometry.location.lng()};
+                                     
         markers.push(new google.maps.Marker({
             map: map,
             title: p.name,
@@ -105,12 +111,32 @@ function initMap() {
         else
             bounds.extend(p.geometry.location);
         
-        
         map.fitBounds(bounds);
+                                     
+         var directionsDisplay = new google.maps.DirectionsRenderer();
+         var directionsService = new google.maps.DirectionsService();
+		
+        directionsDisplay.setMap(map);
+        
+		var request = {
+			origin: originLatLng,
+			destination: destinationLatLng,
+			travelMode: 'DRIVING'
+		}
+
+		directionsService.route(request, function(result, status){
+            console.log(result);
+			if(status == "OK"){
+                
+				directionsDisplay.setDirections(result);
+			}
+		});
      });
-     
-     var directionsDisplay = new google.maps.DirectionsRenderer();
-     var directionsService = new google.maps.DirectionsService();
+    
+    function checkValidation(){
+        var directionsDisplay = new google.maps.DirectionsRenderer();
+        var directionsService = new google.maps.DirectionsService();
+    }
 }
 
 function useCurrentLocationClicked(){
