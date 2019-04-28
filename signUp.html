@@ -44,14 +44,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="FirstName" name="firstName">
-                    </div>
-                    
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"></span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="LastName" name="lastName">
+                        <input type="text" class="form-control" placeholder="Name" name="name">
                     </div>
                     
                     <div class="input-group mb-3">
@@ -124,12 +117,10 @@
                 url: "signup.php",
                 dataType: "json",
                 data: {
-                    "firstName": $("input[name='firstName']").val(),
-                    "lastName": $("input[name='lastName']").val(),
+                    "name": $("input[name='Name']").val(),
                     "birthdate": $("input[name='birthdate']").val(),
-                    "username": $("input[name='username']").val(),
                     "mpg": $("input[name='mpg']").val(),
-                    "firstName": $("input[name='firstName]").val(),
+                    "username": $("input[name='username']").val(),
                     "email": $("input[name='email']").val(),
                     "password": $("input[name='password']").val(),
                     "confirmation": $("input[name='confirmation']").val(),
