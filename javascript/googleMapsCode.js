@@ -174,6 +174,14 @@ function setOption( option ){
             distance.setAttribute("class", "optionDistance");
             distance.innerHTML = info["distance"]["text"]
             document.getElementById(option).appendChild(distance);
+            
+            var routeMap = document.createElement('div');
+            routeMap.setAttribute("class", "routeMap");
+            routeMap.innerHTML = "Map";
+            document.getElementById(option).appendChild(routeMap);
+        }
+        else{
+            console.log(option + " is fucked up");
         }
     });
 }
