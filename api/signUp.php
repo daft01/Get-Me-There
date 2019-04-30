@@ -76,7 +76,8 @@
         $_SESSION["email"] = $record["email"];
         $_SESSION["isAdmin"] = false;
         
-        $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $records = $stmt->fetchAll();
+        //$records = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
         var_dump($records);
         echo "hello";
