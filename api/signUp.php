@@ -1,6 +1,8 @@
 <?php
-
+    
     include '../dbConnection.php';
+    $httpMethod = $_SERVER['REQUEST_METHOD'];
+
     switch($httpMethod) {
     case "OPTIONS":
       header("Access-Control-Allow-Headers: X-ACCESS_TOKEN, Access-Control-Allow-Origin, Authorization, Origin, X-Requested-With, Content-Type, Content-Range, Content-Disposition, Content-Description");
@@ -11,7 +13,8 @@
       http_response_code(401);
       echo "Not Supported";
       break;
-    case 'POST':
+    case "POST":
+      echo "inside post";
       header("Access-Control-Allow-Origin: *");
       
       header("Content-Type: application/json");
@@ -58,18 +61,25 @@
         
         $hashedPassword = password_hash($_POST['password'], PASSWORD_BCRYPT, $options);
         
-        $sql = "INSERT INTO user (name, birthday, username, email, password, mpg)" . 
+        $sql = "INSERT INTO `users` (`name`, `birthday`, `username`, `email`, `password`, `mpg`)" . 
                "VALUES (:name, :birthday, :username, :email, :hashedPassword, :mpg)";
                
         $stmt = $conn->prepare($sql);
         $stmt->execute(array (
           ":email" => $_POST['email'],
+          ":name" => $_POST['name'],
+          ":birthday" => $_POST['birthday'],
+          ":username" => $_POST['username'],
+          ":mpg" => $_POST['mpg'],
           ":hashedPassword" => $hashedPassword));
         
         $_SESSION["email"] = $record["email"];
         $_SESSION["isAdmin"] = false;
+        
         $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
+        var_dump($records);
+        echo "hello";
         echo json_encode($records);
     }
     catch (PDOException $ex) {

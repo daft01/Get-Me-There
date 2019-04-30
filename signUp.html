@@ -114,7 +114,7 @@
         $("#signupButton").on('click', function(e) {
             $.ajax({
                 type: "post",
-                url: "signup.php",
+                url: "api/signUp.php",
                 dataType: "json",
                 data: {
                     "name": $("input[name='Name']").val(),
@@ -140,7 +140,7 @@
                     console.log(arguments)
                 },
                 complete: function(data, status) { //optional, used for debugging purposes
-                    //console.log(status);
+                    console.log(status);
                 }
             });
         })

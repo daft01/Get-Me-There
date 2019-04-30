@@ -1,1 +1,147 @@
 [28-Apr-2019 02:15:44 UTC] PHP Parse error:  syntax error, unexpected '$sql' (T_VARIABLE) in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 8
+[28-Apr-2019 11:00:50 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 11:00:50 UTC] PHP Stack trace:
+[28-Apr-2019 11:00:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 11:00:51 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 11:00:51 UTC] PHP Stack trace:
+[28-Apr-2019 11:00:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 11:00:52 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 11:00:52 UTC] PHP Stack trace:
+[28-Apr-2019 11:00:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 11:01:07 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 11:01:07 UTC] PHP Stack trace:
+[28-Apr-2019 11:01:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 11:01:08 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 11:01:08 UTC] PHP Stack trace:
+[28-Apr-2019 11:01:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 11:01:08 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 11:01:08 UTC] PHP Stack trace:
+[28-Apr-2019 11:01:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 11:01:20 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 11:01:20 UTC] PHP Stack trace:
+[28-Apr-2019 11:01:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 11:01:37 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 11:01:37 UTC] PHP Stack trace:
+[28-Apr-2019 11:01:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 11:01:38 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 11:01:38 UTC] PHP Stack trace:
+[28-Apr-2019 11:01:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 11:04:48 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 11:04:48 UTC] PHP Stack trace:
+[28-Apr-2019 11:04:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 11:05:13 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 11:05:13 UTC] PHP Stack trace:
+[28-Apr-2019 11:05:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 11:08:30 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 11:08:30 UTC] PHP Stack trace:
+[28-Apr-2019 11:08:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 18:36:41 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 18:36:41 UTC] PHP Stack trace:
+[28-Apr-2019 18:36:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 18:36:45 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 18:36:45 UTC] PHP Stack trace:
+[28-Apr-2019 18:36:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 18:36:59 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 18:36:59 UTC] PHP Stack trace:
+[28-Apr-2019 18:36:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 18:43:35 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 18:43:35 UTC] PHP Stack trace:
+[28-Apr-2019 18:43:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 18:45:14 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 18:45:14 UTC] PHP Stack trace:
+[28-Apr-2019 18:45:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 18:45:30 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 18:45:30 UTC] PHP Stack trace:
+[28-Apr-2019 18:45:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 18:45:31 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 18:45:31 UTC] PHP Stack trace:
+[28-Apr-2019 18:45:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 18:45:32 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 18:45:32 UTC] PHP Stack trace:
+[28-Apr-2019 18:45:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 18:45:34 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 18:45:34 UTC] PHP Stack trace:
+[28-Apr-2019 18:45:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 18:45:46 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 18:45:46 UTC] PHP Stack trace:
+[28-Apr-2019 18:45:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 18:45:47 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 18:45:47 UTC] PHP Stack trace:
+[28-Apr-2019 18:45:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 18:53:49 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 18:53:49 UTC] PHP Stack trace:
+[28-Apr-2019 18:53:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 18:54:09 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 18:54:09 UTC] PHP Stack trace:
+[28-Apr-2019 18:54:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 18:54:11 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 18:54:11 UTC] PHP Stack trace:
+[28-Apr-2019 18:54:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 18:54:11 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 18:54:11 UTC] PHP Stack trace:
+[28-Apr-2019 18:54:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 18:54:19 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 18:54:19 UTC] PHP Stack trace:
+[28-Apr-2019 18:54:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 18:54:24 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 18:54:24 UTC] PHP Stack trace:
+[28-Apr-2019 18:54:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 21:32:17 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 21:32:17 UTC] PHP Stack trace:
+[28-Apr-2019 21:32:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 21:34:22 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 21:34:22 UTC] PHP Stack trace:
+[28-Apr-2019 21:34:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 21:36:54 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 21:36:54 UTC] PHP Stack trace:
+[28-Apr-2019 21:36:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 21:37:10 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 21:37:10 UTC] PHP Stack trace:
+[28-Apr-2019 21:37:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 21:37:20 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 21:37:20 UTC] PHP Stack trace:
+[28-Apr-2019 21:37:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 21:50:49 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 21:50:49 UTC] PHP Stack trace:
+[28-Apr-2019 21:50:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 21:53:00 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 21:53:00 UTC] PHP Stack trace:
+[28-Apr-2019 21:53:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 21:53:01 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 21:53:01 UTC] PHP Stack trace:
+[28-Apr-2019 21:53:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 21:54:18 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 21:54:18 UTC] PHP Stack trace:
+[28-Apr-2019 21:54:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 22:27:23 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 22:27:23 UTC] PHP Stack trace:
+[28-Apr-2019 22:27:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 22:27:30 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 22:27:30 UTC] PHP Stack trace:
+[28-Apr-2019 22:27:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 23:13:14 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 23:13:14 UTC] PHP Stack trace:
+[28-Apr-2019 23:13:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 23:13:16 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 23:13:16 UTC] PHP Stack trace:
+[28-Apr-2019 23:13:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 23:13:17 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 23:13:17 UTC] PHP Stack trace:
+[28-Apr-2019 23:13:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[28-Apr-2019 23:15:00 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[28-Apr-2019 23:15:00 UTC] PHP Stack trace:
+[28-Apr-2019 23:15:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[29-Apr-2019 00:34:03 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[29-Apr-2019 00:34:03 UTC] PHP Stack trace:
+[29-Apr-2019 00:34:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[29-Apr-2019 00:34:04 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[29-Apr-2019 00:34:04 UTC] PHP Stack trace:
+[29-Apr-2019 00:34:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[29-Apr-2019 00:36:41 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[29-Apr-2019 00:36:41 UTC] PHP Stack trace:
+[29-Apr-2019 00:36:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[29-Apr-2019 00:37:03 UTC] PHP Fatal error:  Call to undefined function sessions_start() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[29-Apr-2019 00:37:03 UTC] PHP Stack trace:
+[29-Apr-2019 00:37:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[29-Apr-2019 00:40:44 UTC] PHP Parse error:  syntax error, unexpected '$dbConn' (T_VARIABLE) in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 6
+[29-Apr-2019 00:40:51 UTC] PHP Parse error:  syntax error, unexpected '$dbConn' (T_VARIABLE) in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 6
