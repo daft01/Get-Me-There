@@ -30,6 +30,11 @@
       </select>
       <br>
       
+      <div>
+        <h4 id= "cityMpg">City MPG: </h1>
+        <h4 id= "highwayMpg">Highway MPG: </h1>
+      </div>
+      
       <button type = button id = "button">submit</button>
       <div id="container"> </div>
         
@@ -38,7 +43,7 @@
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script>
-
+        /* global $ */
         $(document).ready(function()
         {
         $.ajax
@@ -101,7 +106,43 @@
           });
         });
             
-        
+        $("#year").change(function()
+        {
+          $("#cityMpg").html("City MPG: ")
+          $("#highwayMpg").html("Highway MPG: ")
+            var selectedMake = $("#make").val()
+            var selectedModel = $("#model").val();
+            var selectedYear = $("#year").val();
+            
+            var model = selectedModel.toLowerCase();
+            var make = selectedMake.toLowerCase();
+            var key1 = "MLAC6TRTY2RAC09";
+           $.ajax
+          ({
+            type:"GET",
+            url: "https://specifications.vinaudit.com/v3/specifications?format=json&key=" + key1 + "&year=" + selectedYear + "&make=" + make + "&model=" + model + "",
+            dataType:"json",
+            data:
+            {
+            },
+            success:function(data, status)
+            {
+                console.log(data);
+                if(data['attributes']['highway_mileage'] == 'undefined')
+                {
+                  $("#highwayMpg").html("Highway MPG: " + data['attributes']['highway_mileage']);
+                  $("#cityMpg").html("City MPG: " + data['attributes']['city_mileage']);
+                }
+                else
+                {
+                  $("#highwayMpg").html("Highway MPG: Unavailable")
+                  $("#cityMpg").html("City MPG: Unavailable");
+                }
+                
+            } ,
+          });
+          
+        });
         
         
                   
