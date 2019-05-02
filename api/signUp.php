@@ -61,23 +61,30 @@
         
         $hashedPassword = password_hash($_POST['password'], PASSWORD_BCRYPT, $options);
         
-        $sql = "INSERT INTO `users` (`name`, `birthday`, `username`, `email`, `password`, `mpg`)" . 
-               "VALUES (:name, :birthday, :username, :email, :hashedPassword, :mpg)";
+        echo $_POST['name'];
+        echo $_POST['birthday'];
+        echo $_POST['name'];
+        
+        $date = strtotime($_POST['birthday']);
+        $newformat = date('Y-m-d', $time);
+        
+        $sql = "INSERT INTO `users` (`name`, `birthday`, `username`, `email`, `password`, `confirmation`)" . 
+               "VALUES (:name, :birthday, :username, :email, :hashedPassword, :hashedPassword)";
                
         $stmt = $conn->prepare($sql);
         $stmt->execute(array (
           ":email" => $_POST['email'],
           ":name" => $_POST['name'],
-          ":birthday" => $_POST['birthday'],
+          ":birthday" => $newformat,
           ":username" => $_POST['username'],
-          ":mpg" => $_POST['mpg'],
+          // ":mpg" => $_POST['mpg'],
           ":hashedPassword" => $hashedPassword));
         
         $_SESSION["email"] = $record["email"];
         $_SESSION["isAdmin"] = false;
         
-        $records = $stmt->fetchAll();
-        //$records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        // $records = $stmt->fetchAll();
+        $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
         var_dump($records);
         echo "hello";

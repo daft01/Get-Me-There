@@ -51,16 +51,16 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Birthdate" name="birthdate">
+                        <input type="text" class="form-control" placeholder="Birthdate: YYYYMMDD" name="birthdate">
                     </div>
 
                     
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"></span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Mpg" name="mpg">
-                    </div>
+                    <!--<div class="input-group mb-3">-->
+                    <!--    <div class="input-group-prepend">-->
+                    <!--        <span class="input-group-text"></span>-->
+                    <!--    </div>-->
+                    <!--    <input type="text" class="form-control" placeholder="Mpg" name="mpg">-->
+                    <!--</div>-->
                     
                                         
                     <div class="input-group mb-3">
@@ -117,9 +117,8 @@
                 url: "api/signUp.php",
                 dataType: "json",
                 data: {
-                    "name": $("input[name='Name']").val(),
+                    "name": $("input[name='name']").val(),
                     "birthdate": $("input[name='birthdate']").val(),
-                    "mpg": $("input[name='mpg']").val(),
                     "username": $("input[name='username']").val(),
                     "email": $("input[name='email']").val(),
                     "password": $("input[name='password']").val(),
