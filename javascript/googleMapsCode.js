@@ -1,6 +1,8 @@
 var map, infoWindow;
 
 var originLatLng, destinationLatLng;
+var originName, dastinationName;
+
 var originValid = false, destinationValid = false;
 
 var directionsDisplay = new google.maps.DirectionsRenderer();
@@ -40,8 +42,6 @@ map.addListener('bounds_changed', function() {
     
 originSearchBox.addListener("places_changed", function(){
 
-    document.getElementById("useCurrentLocation").checked = false;
-
     var places = originSearchBox.getPlaces();
 
     if(places.length == 0){
@@ -60,6 +60,8 @@ originSearchBox.addListener("places_changed", function(){
         originValid = true;
     }
 
+    originName = p.formatted_address;
+    
     originLatLng = {lat: p.geometry.location.lat(), lng: p.geometry.location.lng()};
 
     markers.push(new google.maps.Marker({
@@ -99,6 +101,8 @@ destinationSearchBox.addListener("places_changed", function(){
         destinationValid = true;
      }
 
+    destinationName = p.formatted_address;
+
     destinationLatLng = {lat: p.geometry.location.lat(), lng: p.geometry.location.lng()};
 
     markers.push(new google.maps.Marker({
@@ -116,10 +120,6 @@ destinationSearchBox.addListener("places_changed", function(){
     
     checkRoute();
 });
-
-function useCurrentLocationClicked(){
-    
-}
 
 function checkRoute(){
     
@@ -199,4 +199,21 @@ function setRoutes(route){
              directionsDisplay.setDirections(result);
          }
      });
+}
+
+function addTripClicked(){
+    
+    console.log("button clicked");
+    
+    if( !originValid || !destinationValid)
+        alert("Locations not valid");
+    
+    var trip = document.createElement('div');
+    trip.setAttribute("class", "trip");
+    trip.setAttribute("onclick", "tripClicked(this.id)");
+    trip.innerHTML = "<div class='tripLocation'> From: " + originName + "</div>" +  "<div class='tripLocation'> To: " + destinationName + "</div>";
+    
+    document.getElementById("trips").appendChild(trip);
+    
+    
 }
