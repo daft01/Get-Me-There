@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+    </head>
+    <body>
+        
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        
+        $(document).ready(function(e) {
+            
+            $.ajax({
+                type: "get",
+                url: "http://lyft.com/ride?id=lyft&pickup[latitude]=37.764728&pickup[longitude]=-122.422999&partner=UoJ748bo1b-W&destination[latitude]=37.7763592&destination[longitude]=-122.4242038",
+                dataType: "json",
+                data: {},
+                success: function(data) {
+                    console.log(data);
+                },
+                error: function(err) {
+                    console.log(arguments);  
+                },
+                complete: function(data, status) { //optional, used for debugging purposes
+                    //console.log(status);
+                }
+            });
+            
+        });
+    </script>
+    </body>
+</html>

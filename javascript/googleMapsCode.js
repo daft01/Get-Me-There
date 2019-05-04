@@ -131,6 +131,11 @@ function checkRoute(){
     map = new google.maps.Map(document.getElementById('map'), options);
     directionsDisplay.setMap(map);
     
+    document.getElementById("DRIVING").innerHTML = "";
+    document.getElementById("WALKING").innerHTML = "";
+    document.getElementById("BICYCLING").innerHTML = "";
+    document.getElementById("TRANSIT").innerHTML = "";
+    
     tM = ['WALKING', 'DRIVING', 'BICYCLING', 'TRANSIT'];
     
     for(var i=0; i<tM.length; i++){
@@ -211,9 +216,8 @@ function addTripClicked(){
     var trip = document.createElement('div');
     trip.setAttribute("class", "trip");
     trip.setAttribute("onclick", "tripClicked(this.id)");
-    trip.innerHTML = "<div class='tripLocation'> From: " + originName + "</div>" +  "<div class='tripLocation'> To: " + destinationName + "</div>";
+    trip.innerHTML = "<div class='tripLocation'> From: " + originName + "</div>" + 
+                     "<div class='tripLocation'> To: " + destinationName + "</div>";
     
     document.getElementById("trips").appendChild(trip);
-    
-    
 }
