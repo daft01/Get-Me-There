@@ -90,7 +90,33 @@
                         </div>
                         <input type="password" class="form-control" placeholder="Confirm Password" name="confirmation">
                     </div>
-
+                    <div>
+                        <label>Make: </label>
+                        <select id="make">
+                              
+                        </select>
+                        <br>
+                        <label>Model: </label>
+                        <select id="model">
+                            
+                              
+                        </select>
+                          
+                        <br>
+                          
+                        <label>Year: </label>
+                        <select id ="year">
+                            
+                        </select>
+                        <br>
+                          
+                        <div>
+                            <h5 id= "cityMpg">City MPG: </h1>
+                            <h5 id= "highwayMpg">Highway MPG: </h1>
+                        </div>
+                    
+                    </div>
+                    
                     <button id="signupButton" type="button" class="btn btn-block btn-success">Create Account</button>
                     <div>
                         <a class="text-secondary" href="login.html">Login to an account</a>
@@ -111,6 +137,109 @@
 
     <script>
     /* global $ */
+    
+    
+        $(document).ready(function()
+        {
+        $.ajax
+          ({
+            type:"GET",
+            url: "https://vpic.nhtsa.dot.gov/api/vehicles/GetAllMakes?format=json",
+            dataType:"json",
+            data:
+            {
+            },
+            success:function(data, status)
+            {
+                // console.log(data);
+                
+                // $.each(data["Results"][0], function(element)
+                // {
+                    for(var i = 0; i < 100; i++)
+                    {
+                        $("#make").append('<option>' + data["Results"][i]["Make_Name"] + '</option>');
+                    }
+                    
+                // });
+                
+            } ,
+          complete: function(status, err){
+             console.log(status);
+          } 
+          });
+        });
+        
+        $("#make").change(function()
+        {
+            $("#model").html("")
+            var selected = $("#make").val()
+            var model = selected.toLowerCase();
+           $.ajax
+          ({
+            type:"GET",
+            url: "https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMake/" + model + "?format=json",
+            dataType:"json",
+            data:
+            {
+            },
+            success:function(data, status)
+            {
+                console.log(data);
+                for(var i = 0; i < 100; i++)
+                {
+                  $("#model").append('<option>' + data["Results"][i]["Model_Name"] + '</option>');
+                }
+                    
+                for(var i = 1; i < 30; i++)
+                {
+                  $("#year").append('<option>' + (1990 + i) + '</option>');
+                }
+                
+            } ,
+          complete: function(status, err){
+             console.log(status);
+          } 
+          });
+        });
+        
+        $("#year").change(function()
+        {          
+            $("#cityMpg").html("City MPG: ")
+            $("#highwayMpg").html("Highway MPG: ")
+            var selectedMake = $("#make").val()
+            var selectedModel = $("#model").val();
+            var selectedYear = $("#year").val();
+            
+            var model = selectedModel.toLowerCase();
+            var make = selectedMake.toLowerCase();
+            var key1 = "MLAC6TRTY2RAC09";
+           $.ajax
+        ({
+            type:"GET",
+            url: "https://specifications.vinaudit.com/v3/specifications?format=json&key=" + key1 + "&year=" + selectedYear + "&make=" + make + "&model=" + model + "",
+            dataType:"json",
+            data:
+            {
+            },
+            success:function(data, status)
+            {
+                console.log(data);
+                if(data['attributes']['highway_mileage'] != 'undefined')
+                {
+                  $("#highwayMpg").html("Highway MPG: " + data['attributes']['highway_mileage']);
+                  $("#cityMpg").html("City MPG: " + data['attributes']['city_mileage']);
+                }
+                else
+                {
+                  $("#highwayMpg").html("Highway MPG: Unavailable")
+                  $("#cityMpg").html("City MPG: Unavailable");
+                }
+                
+            } ,
+          });
+        });
+
+    
         $("#signupButton").on('click', function(e) {
             $.ajax({
                 type: "post",
@@ -143,6 +272,10 @@
                 }
             });
         })
+        
+        
+        
+        
     </script>
 </body>
 
