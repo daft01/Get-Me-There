@@ -106,7 +106,7 @@
           });
         });
             
-        $("#year").change(function()
+        $("#button").on("click", function()
         {
           $("#cityMpg").html("City MPG: ")
           $("#highwayMpg").html("Highway MPG: ")
@@ -128,7 +128,7 @@
             success:function(data, status)
             {
                 console.log(data);
-                if(data['attributes']['highway_mileage'] == 'undefined')
+                if(data['attributes']['highway_mileage'] != 'undefined')
                 {
                   $("#highwayMpg").html("Highway MPG: " + data['attributes']['highway_mileage']);
                   $("#cityMpg").html("City MPG: " + data['attributes']['city_mileage']);
