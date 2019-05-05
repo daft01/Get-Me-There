@@ -165,3 +165,39 @@ Stack trace:
 #0 /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php(29): PDOStatement->execute(Array)
 #1 {main}
   thrown in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 29
+[05-May-2019 07:26:14 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:24
+Stack trace:
+#0 /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php(24): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 24
+[05-May-2019 07:28:48 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:23
+Stack trace:
+#0 /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php(23): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 23
+[05-May-2019 07:32:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: parameter was not defined' in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:26
+Stack trace:
+#0 /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php(26): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 26
+[05-May-2019 07:34:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: parameter was not defined' in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php(27): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 27
+[05-May-2019 07:37:16 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: parameter was not defined' in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php(27): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 27
+[05-May-2019 07:41:38 UTC] PHP Parse error:  syntax error, unexpected '{', expecting '(' in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 33
+[05-May-2019 07:55:23 UTC] PHP Parse error:  syntax error, unexpected 'case' (T_CASE) in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 37
+[05-May-2019 08:09:22 UTC] PHP Warning:  include(/dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[05-May-2019 08:09:22 UTC] PHP Stack trace:
+[05-May-2019 08:09:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[05-May-2019 08:09:22 UTC] PHP Warning:  include(): Failed opening '/dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 2
+[05-May-2019 08:09:22 UTC] PHP Stack trace:
+[05-May-2019 08:09:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0
+[05-May-2019 08:09:22 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php on line 7
+[05-May-2019 08:09:22 UTC] PHP Stack trace:
+[05-May-2019 08:09:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/project/Get-Me-There/api/signUp.php:0

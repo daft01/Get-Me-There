@@ -127,7 +127,6 @@
                     "phone_number": $("input[name='phone_number']").val(),
                     "city_mileage": $("input[name='city_mileage']").val(),
                     "freeway_mileage": $("input[name='freeway_mileage']").val(),
-                    "birthdate": $("input[name='birthdate']").val(),
                     
                 },
                 success: function(data, status) {
