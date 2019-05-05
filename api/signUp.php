@@ -1,112 +1,31 @@
 <?php
-    
     include '../dbConnection.php';
-    $httpMethod = $_SERVER['REQUEST_METHOD'];
 
-    switch($httpMethod) {
-    case "OPTIONS":
-      header("Access-Control-Allow-Headers: X-ACCESS_TOKEN, Access-Control-Allow-Origin, Authorization, Origin, X-Requested-With, Content-Type, Content-Range, Content-Disposition, Content-Description");
-      header("Access-Control-Allow-Methods: POST, GET");
-      header("Access-Control-Max-Age: 3600");
-      exit();
-    case "GET":
-      http_response_code(401);
-      echo "Not Supported";
-      break;
-    case "POST":
-      echo "inside post";
-      header("Access-Control-Allow-Origin: *");
-      header("Content-Type: application/json");
-
-      $rawJsonString = file_get_contents("php://input");
-
-      $jsonData = json_decode($rawJsonString, true);
-      
-      if (empty($_POST["password"])) {
-        echo json_encode(array(
-          "isSignedUp" => false, 
-          "message" => "No password provided"));
-          
-        exit;
-      }
-
-      if (empty($_POST["confirmation"])) {
-        echo json_encode(array(
-          "isSignedUp" => false, 
-          "message" => "No password confirmation provided"));
-          
-        exit;
-      }
-
-      if ($_POST["password"] != $_POST["confirmation"]) {
-        echo json_encode(array(
-          "isSignedUp" => false, 
-          "message" => "password does not equal confirmation"));
-          
-        exit;
-      }
-    
     $conn = getDatabaseConnection("get_me_there");
+  
+    $options = [ 'cost' => 11 ];
+    $hashedPassword = password_hash($_POST['password'], PASSWORD_BCRYPT, $options);
     
-    $options = [
-        'cost' => 11,
-        ];
-    try
-    {
-        $hashedPassword = password_hash($_POST['password'], PASSWORD_BCRYPT, $options);
-        
-        $date = strtotime($_POST['birthday']);
-        $newformat = date('Y-m-d', $time);
-        
-        $sql = "INSERT INTO `users` (`name`, `birthday`, `username`, `email`, `password`, `confirmation`)" . 
-               "VALUES (:name, :birthday, :username, :email, :hashedPassword, :hashedPassword)";
-               
-        $stmt = $conn->prepare($sql);
-        $stmt->execute(array (
-          "isSignedUp" => true,
-          // "message" => "Signed Up Successful",
-          ":email" => $_POST['email'],
-          ":name" => $_POST['name'],
-          ":birthday" => $newformat,
-          ":username" => $_POST['username'],
-          ":hashedPassword" => $hashedPassword));
-        
-        $_SESSION["email"] = $record["email"];
-        $_SESSION["isAdmin"] = false;
-        
-        echo json_encode(array("isSignedUp" => true));
-        
-        // $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        
-        // var_dump($records);
-        // echo json_encode($records);
-    }
-    catch (PDOException $ex) {
-        switch ($ex->getCode()) {
-          case "23000":
-            echo json_encode(array(
-              "isSignedUp" => false, 
-              "message"=> "email taken, try another",
-              "details" => $ex->getMessage()));
-            break;
-          default:
-            echo json_encode(array(
-              "isSignedUp" => false, 
-              "message"=> $ex->getMessage(),
-              "details" => $ex->getMessage()));
-            break;
-        }
-        exit;
-      }
-      break;
-    case 'PUT':
-      // TODO: Access-Control-Allow-Origin
-      http_response_code(401);
-      echo "Not Supported";
-      break;
-    case 'DELETE':
-      // TODO: Access-Control-Allow-Origin
-      http_response_code(401);
-      break;
-  }
+    $date = strtotime($_POST['birthday']);
+    
+    $newformat = date('Y-m-d', $time);
+    
+    // INSERT INTO `users`(`email`, `password`, `first_name`, `last_name`, `phone_number`, `city_mileage`, `freeway_mileage`, `birthday`) VALUES ( "j2@csumb.edu", "abc", "Jessi","Rios",8311234567,23,32,"19901231")
+    $sql = "INSERT INTO `users`(`email`, `password`, `first_name`, `last_name`, `phone_number`, `city_mileage`, `freeway_mileage`, `birthday`)" .
+                       "VALUES (:email, :password, :first_name, :last_name, :phone_number, :city_mileage, :freeway_mileage, :birthday)";
+    // INSERT INTO `users`(`email`, `password`, `first_name`, `last_name`, `phone_number`, `city_mileage`, `freeway_mileage`, `birthday`) VALUES ( "j4@csumb.edu", "abc", "Jessi","Rios","8311234567", 23, 32,"19901231")
+    
+    $stmt = $conn->prepare($sql);
+    $stmt->execute(array (
+      "isSignedUp" => true,
+      ":email" => $_POST['email'],
+      ":hashedPassword" => $hashedPassword,
+      "first_name" => $_POST['first_name'],
+      "last_name" => $_POST['last_name'],
+      "phone_number" => $_POST['phone_number'],
+      ":city_mileage" => $_POST['city_mileage'],
+      ":freeway_mileage" => $_POST['freeway_mileage'],
+      ":birthday" => $newformat));
+    
+    echo json_encode(array("isSignedUp" => true));
 ?>

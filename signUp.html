@@ -10,15 +10,15 @@
 
     <title> Get-Me-There Login</title>
 
-    <!-- Icons -->
+    <!--
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/simple-line-icons.css" rel="stylesheet">
 
-    <!-- Main styles for this application -->
+  
     <link href="css/style.min.css" rel="stylesheet">
 
-    <!-- Styles required by this views -->
+   -->
     <style>
         html,
         body,
@@ -39,57 +39,63 @@
             <div class="card-body p-4">
                 <h1>Signup</h1>
                 <p class="text-muted">Sign up for an account</p>
+                
                 <form>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"></span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Name" name="name">
-                    </div>
-                    
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"></span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Birthdate: YYYYMMDD" name="birthdate">
-                    </div>
-
-                    
-                    <!--<div class="input-group mb-3">-->
-                    <!--    <div class="input-group-prepend">-->
-                    <!--        <span class="input-group-text"></span>-->
-                    <!--    </div>-->
-                    <!--    <input type="text" class="form-control" placeholder="Mpg" name="mpg">-->
-                    <!--</div>-->
-                    
-                                        
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"></span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Username" name="username">
-                    </div>
-                    
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text">@</span>
                         </div>
                         <input type="text" class="form-control" placeholder="Email" name="email">
                     </div>
-
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="icon-lock"></i></span>
                         </div>
                         <input type="password" class="form-control" placeholder="Password" name="password">
                     </div>
-
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="icon-lock"></i></span>
                         </div>
                         <input type="password" class="form-control" placeholder="Confirm Password" name="confirmation">
                     </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="First Name" name="first_name">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Last Name" name="last_name">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Phone Number" name="phone_number">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="City Mileage" name="city_mileage">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Freeway Mileage" name="freeway_mileage">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Birthdate: YYYYMMDD" name="birthdate">
+                    </div>
+                    
                     <div>
                         <label>Make: </label>
                         <select id="make">
@@ -134,159 +140,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-    <script>
-    /* global $ */
-    
-    
-        $(document).ready(function()
-        {
-        $.ajax
-          ({
-            type:"GET",
-            url: "https://vpic.nhtsa.dot.gov/api/vehicles/GetAllMakes?format=json",
-            dataType:"json",
-            data:
-            {
-            },
-            success:function(data, status)
-            {
-                // console.log(data);
-                
-                // $.each(data["Results"][0], function(element)
-                // {
-                    for(var i = 0; i < 100; i++)
-                    {
-                        $("#make").append('<option>' + data["Results"][i]["Make_Name"] + '</option>');
-                    }
-                    
-                // });
-                
-            } ,
-          complete: function(status, eÏrr){
-             console.log(status);
-          } 
-          });
-        });
-        
-        $("#make").change(function()
-        {
-            $("#model").html("")
-            var selected = $("#make").val()
-            var model = selected.toLowerCase();
-           $.ajax
-          ({
-            type:"GET",
-            url: "https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMake/" + model + "?format=json",
-            dataType:"json",
-            data:
-            {
-            },
-            success:function(data, status)
-            {
-                console.log(data);
-                for(var i = 0; i < 100; i++)
-                {
-                  $("#model").append('<option>' + data["Results"][i]["Model_Name"] + '</option>');
-                }
-                    
-                for(var i = 1; i < 30; i++)
-                {
-                  $("#year").append('<option>' + (1990 + i) + '</option>');
-                }
-                
-            } ,
-          complete: function(status, err){
-             console.log(status);
-          } 
-          });
-        });
-        
-        $("#year").change(function()
-        {          
-            $("#cityMpg").html("City MPG: ")
-            $("#highwayMpg").html("Highway MPG: ")
-            var selectedMake = $("#make").val()
-            var selectedModel = $("#model").val();
-            var selectedYear = $("#year").val();
-            
-            var model = selectedModel.toLowerCase();
-            var make = selectedMake.toLowerCase();
-            var key1 = "MLAC6TRTY2RAC09";
-           $.ajax
-        ({
-            type:"GET",
-            url: "https://specifications.vinaudit.com/v3/specifications?format=json&key=" + key1 + "&year=" + selectedYear + "&make=" + make + "&model=" + model + "",
-            dataType:"json",
-            data:
-            {
-            },
-            success:function(data, status)
-            {
-                console.log(data);
-                if(data['attributes']['highway_mileage'] != 'undefined')
-                {
-                  $("#highwayMpg").html("Highway MPG: " + data['attributes']['highway_mileage']);
-                  $("#cityMpg").html("City MPG: " + data['attributes']['city_mileage']);
-                }
-                else
-                {
-                  $("#highwayMpg").html("Highway MPG: Unavailable")
-                  $("#cityMpg").html("City MPG: Unavailable");
-                }
-                
-            } ,
-          });
-        });
-
-    
-        $("#signupButton").on('click', function(e) {
-            $.ajax({
-                type: "post",
-                url: "api/signUp.php",
-                dataType: "json",
-                data: {
-                    "name": $("input[name='name']").val(),
-                    "birthdate": $("input[name='birthdate']").val(),
-                    "username": $("input[name='username']").val(),
-                    "email": $("input[name='email']").val(),
-                    "password": $("input[name='password']").val(),
-                    "confirmation": $("input[name='confirmation']").val(),
-                    
-                },
-                success: function(data, status) {
-                    if (data.isSignedUp) {
-                        window.location = "index.php";
-                        
-                        $("#message").html(data.message);
-                    }
-                    else {
-                        $("#message").html("Error: " + data.message);
-                        $("#message").removeClass("open-hidden");
-                    }
-                    console.log(data.isSignedUp);
-                    console.log("helllooooo");
-                    return alert("it doesnt work");
-                },
-                error: function() { 
-                    console.log(arguments);
-                    console.log(data);
-                    console.log("helllooooo");
-                    return alert("it doesnt work");
-                },
-                complete: function(data, status) { //optional, used for debugging purposes
-                    console.log(status);
-                    console.log(data);
-                    console.log("helllooooo");
-                    return alert("it doesnt work");
-                }
-            });
-        })
-        
-        
-        
-        
-    </script>
+    <script type="text/javascript" src="javascript/signUp.js"></script>
 </body>
 
 </html>
