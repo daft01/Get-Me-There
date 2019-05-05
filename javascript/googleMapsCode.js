@@ -163,27 +163,40 @@ function setOption( option ){
             
             var info = result["routes"][0]["legs"][0];
 
-            console.log(info);
-            
             var title = document.createElement('div');
-            title.setAttribute("class", "optionTitle");
             title.innerHTML = option;
             document.getElementById(option).appendChild(title);
             
             var duration = document.createElement('div');
-            duration.setAttribute("class", "optionDuration");
-            duration.innerHTML = info["duration"]["text"];
+            duration.innerHTML = "<strong>Duraction: </strong>" + info["duration"]["text"];
             document.getElementById(option).appendChild(duration);
             
             var distance = document.createElement('div');
-            distance.setAttribute("class", "optionDistance");
-            distance.innerHTML = info["distance"]["text"]
+            distance.innerHTML = "<strong>Distance: </strong>" + info["distance"]["text"]
             document.getElementById(option).appendChild(distance);
             
-            var routeMap = document.createElement('div');
-            routeMap.setAttribute("class", "routeMap");
-            routeMap.innerHTML = "Map";
-            document.getElementById(option).appendChild(routeMap);
+            if(option == "TRANSIT"){
+                console.log(result);
+                
+                var fare = result["routes"][0]["fare"];
+                
+                if(fare){
+                    
+                    var departure = document.createElement('div');
+                    departure.innerHTML = "<strong>Departure Time: </strong>" + info["departure_time"]["text"];
+                    document.getElementById(option).appendChild(departure);
+                    
+                    var arrival = document.createElement('div');
+                    arrival.innerHTML = "<strong>Arrival Time: </strong>" + info["arrival_time"]["text"];
+                    document.getElementById(option).appendChild(arrival);
+                        
+                    var f = document.createElement('div');
+                    f.innerHTML = "<strong>Cost: </strong>" + fare["text"] + " " + fare["currency"];
+                    document.getElementById(option).appendChild(f);
+                    
+                    
+                }
+            }
         }
         else{
             console.log(option + " is fucked up");
@@ -208,16 +221,34 @@ function setRoutes(route){
 
 function addTripClicked(){
     
-    console.log("button clicked");
-    
     if( !originValid || !destinationValid)
         alert("Locations not valid");
     
     var trip = document.createElement('div');
     trip.setAttribute("class", "trip");
-    trip.setAttribute("onclick", "tripClicked(this.id)");
-    trip.innerHTML = "<div class='tripLocation'> From: " + originName + "</div>" + 
-                     "<div class='tripLocation'> To: " + destinationName + "</div>";
+    trip.innerHTML = "<div class='tripLocation'> From: " + originName + "</div>" + "<div class='tripLocation'> To: " + destinationName + "</div>";
+    
+    var detailsButton = document.createElement('button');
+    var deleteButton = document.createElement('button');
+    
+    detailsButton.setAttribute("class", "detailsButton");
+    detailsButton.setAttribute("onclick", "detailsButtonClicked(this.id)");
+    detailsButton.innerHTML = "DETAILS";
+    
+    deleteButton.setAttribute("class", "deleteButton");
+    deleteButton.setAttribute("onclick", "deleteButtonClicked(this.id)");
+    deleteButton.innerHTML = "DELETE";
+    
+    trip.appendChild(detailsButton);
+    trip.appendChild(deleteButton);
     
     document.getElementById("trips").appendChild(trip);
+}
+
+function detailsButtonClicked(id){
+    
+}
+
+function deleteButtonClicked(id){
+    
 }
