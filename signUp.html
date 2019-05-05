@@ -163,7 +163,7 @@
                 // });
                 
             } ,
-          complete: function(status, err){
+          complete: function(status, eÏrr){
              console.log(status);
           } 
           });
@@ -255,20 +255,30 @@
                     
                 },
                 success: function(data, status) {
-                    console.log(data);
                     if (data.isSignedUp) {
-                        window.location = "index.php"
+                        window.location = "index.php";
+                        
+                        $("#message").html(data.message);
                     }
                     else {
                         $("#message").html("Error: " + data.message);
                         $("#message").removeClass("open-hidden");
                     }
+                    console.log(data.isSignedUp);
+                    console.log("helllooooo");
+                    return alert("it doesnt work");
                 },
                 error: function() { 
-                    console.log(arguments)
+                    console.log(arguments);
+                    console.log(data);
+                    console.log("helllooooo");
+                    return alert("it doesnt work");
                 },
                 complete: function(data, status) { //optional, used for debugging purposes
                     console.log(status);
+                    console.log(data);
+                    console.log("helllooooo");
+                    return alert("it doesnt work");
                 }
             });
         })

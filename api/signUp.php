@@ -16,15 +16,11 @@
     case "POST":
       echo "inside post";
       header("Access-Control-Allow-Origin: *");
-      
       header("Content-Type: application/json");
 
-      
       $rawJsonString = file_get_contents("php://input");
 
-      
       $jsonData = json_decode($rawJsonString, true);
-
       
       if (empty($_POST["password"])) {
         echo json_encode(array(
@@ -57,13 +53,7 @@
         ];
     try
     {
-        
-        
         $hashedPassword = password_hash($_POST['password'], PASSWORD_BCRYPT, $options);
-        
-        echo $_POST['name'];
-        echo $_POST['birthday'];
-        echo $_POST['name'];
         
         $date = strtotime($_POST['birthday']);
         $newformat = date('Y-m-d', $time);
@@ -73,22 +63,23 @@
                
         $stmt = $conn->prepare($sql);
         $stmt->execute(array (
+          "isSignedUp" => true,
+          // "message" => "Signed Up Successful",
           ":email" => $_POST['email'],
           ":name" => $_POST['name'],
           ":birthday" => $newformat,
           ":username" => $_POST['username'],
-          // ":mpg" => $_POST['mpg'],
           ":hashedPassword" => $hashedPassword));
         
         $_SESSION["email"] = $record["email"];
         $_SESSION["isAdmin"] = false;
         
-        // $records = $stmt->fetchAll();
-        $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        echo json_encode(array("isSignedUp" => true));
         
-        var_dump($records);
-        echo "hello";
-        echo json_encode($records);
+        // $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+        // var_dump($records);
+        // echo json_encode($records);
     }
     catch (PDOException $ex) {
         switch ($ex->getCode()) {
