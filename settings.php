@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Settings</title>
@@ -40,7 +44,9 @@
         
     </fieldset>
   </form>
-
+  
+  <button type = button id="deleteButton"> Delete Account</button>
+  
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script>
         /* global $ */
@@ -144,6 +150,20 @@
           
           
         });
+        
+        $("#deleteButton").on("click", function()
+        {
+          $.ajax(
+            type:"POST",
+            url:"api/deleteAccount.php",
+            dataType: "json",
+            data: {
+              if(!isset($_SESSION["email"]))
+                "email" : $_SESSION["email"];
+              }
+            
+            )
+        })
         
         
                   

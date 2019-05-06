@@ -132,7 +132,7 @@
                 success: function(data, status) {
                     console.log(data);
                     if (data.isSignedUp) {
-                        window.location = "index.php";
+                        window.location = "../Get-Me-There/index.html";
                         $("#message").html("Account successful");
                     }
                     else {

@@ -1,11 +1,15 @@
 <?php
+  session_start();
+?>
+
+<?php
     include 'dbConnection.php';
     
     header("Access-Control-Allow-Origin: *");
     header("Content-Type: application/json");
     
     $conn = getDatabaseConnection("get_me_there");
-    
+
     $rawJsonString = file_get_contents("php://input");
     $jsonData = json_decode($rawJsonString, true);
   
