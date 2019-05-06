@@ -1,5 +1,6 @@
 <?php
   session_start();
+  $email = $_SESSION['email'];
 ?>
 
 <!DOCTYPE html>
@@ -23,10 +24,8 @@
       <button id="addTrip" onclick="addTripClicked()">Add to trips</button>
     </div>
     
-    <div = "email">
-      <?php
-        echo $_SESSION['email'];
-      ?>
+    <div id = "email">
+      <?= $email ?>
     </div>
     
     <div id="map"></div>
