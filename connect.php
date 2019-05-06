@@ -1,11 +1,24 @@
 <?php
-$connection = mysqli_connect('localhost', 'irismanriquezc', '');
-if (!$connection){
-    die("Database Connection Failed" . mysqli_error($connection));
-}
-$select_db = mysqli_select_db($connection, 'pixelw3p_demo');
-if (!$select_db){
-    die("Database Selection Failed" . mysqli_error($connection));
-}
-?>
 
+    function getDBConnection(){
+        $host = "localhost";
+        $dbName = "login";//the database I want
+        $user = "irismanriquezc";
+        $pass = "";
+        $dsn = "mysql:host=$host;dbname=$dbName";
+        
+       
+       
+       $opt =[
+           PDO::ATTR_ERRMODE=> PDO::ERRMODE_EXCEPTION,
+           PDO::ATTR_DEFAULT_FETCH_MODE=> PDO::FETCH_ASSOC,
+           PDO::ATTR_EMULATE_PREPARES => false,
+           ];
+           
+          $pdo = new PDO($dsn,$user,$pass, $opt);
+          
+          return $pdo;
+    }
+    
+// getDBConnection(); //Gives you the error message
+?>

@@ -245,6 +245,22 @@ function addTripClicked(){
     document.getElementById("trips").appendChild(trip);
 }
 
+$.ajax({
+    type: "GET",
+    url: "api/getInfo.php",
+    dataType: "json",
+    data: {
+      email : "dm93927@gmail.com"
+    },
+    success: function (data) {
+       
+      console.log(data);
+    },
+    error: function(err) {
+        console.log(arguments);
+    }
+});
+
 function detailsButtonClicked(id){
     
 }
