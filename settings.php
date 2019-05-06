@@ -54,6 +54,7 @@
         var make;
         var city;
         var highway;
+        
         $(document).ready(function()
         {
         $.ajax
@@ -83,6 +84,7 @@
           } 
           });
         });
+        
         $("#make").change(function()
         {
             $("#model").html("")
@@ -115,6 +117,7 @@
           } 
           });
         });
+        
         $("#year").change(function()
         {
           $("#cityMpg").html("City MPG: ")
@@ -158,19 +161,29 @@
           
         });
         
-        // $("#deleteButton").on("click", function()
-        // {
-        //   $.ajax(
-        //     type:"POST",
-        //     url:"api/deleteAccount.php",
-        //     dataType: "json",
-        //     data: {
-        //       if(!isset($_SESSION["email"]))
-        //         "email" : $_SESSION["email"];
-        //       }
-            
-        //     )
-        // })
+        $("#deleteButton").on("click", function()
+        {
+          $.ajax
+          ({
+            type:"POST",
+            url:"api/deleteAccount.php",
+            dataType: "text",
+            data: 
+            {
+            },
+            success: function(data)
+            {
+              console.log(data);
+              if(data){
+                window.location = "../Get-Me-There/index.html";
+                console.log("Account deleted.");
+              }
+              else{
+                console.log("Account was not deleted.");
+              }
+            }
+          });
+        });
         
         $("#button").on("click", function()
         {
@@ -189,7 +202,6 @@
             },
             success:function(data, status)
             {
-                
                 
             } ,
             

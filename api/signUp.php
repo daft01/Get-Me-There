@@ -33,7 +33,7 @@
         ":freeway_mileage" => $_POST['freeway_mileage']
         ));
       
-      $_SESSION["email"] = $record["email"];
+      $_SESSION["email"] = $_POST['email'];
       $_SESSION["isAdmin"] = false;
           
       echo json_encode(array("isSignedUp" => true)); 

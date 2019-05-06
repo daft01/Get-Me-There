@@ -10,5 +10,14 @@
     
     $conn = getDatabaseConnection("get_me_there");
     
-    $sql = "DELETE FROM `user` WHERE email = " . $_SESSION['email'];
+    if(isset( $_SESSION['email']))
+    {
+        $sql = "DELETE FROM `user` WHERE email = '" . $_SESSION['email'] ."'";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        echo json_encode(array("message" => true));
+    }
+    else{
+        echo json_encode(array("message" => false));
+    }
 ?>
