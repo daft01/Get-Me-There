@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -19,8 +23,13 @@
       <button id="addTrip" onclick="addTripClicked()">Add to trips</button>
     </div>
     
+    <div = "email">
+      <?php
+        echo $_SESSION['email'];
+      ?>
+    </div>
+    
     <div id="map"></div>
-      
 	<div id="optionsContainer">
 		<div id="DRIVING" class="option" onclick="optionClicked(this.id)"></div>
 		<div id="WALKING" class="option" onclick="optionClicked(this.id)"></div>

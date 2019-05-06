@@ -3,7 +3,7 @@
     
     $conn = getDatabaseConnection("get_me_there");
     
-    $sql = "SELECT * FROM users NATURAL JOIN cars WHERE email = '" . $_GET["email"] . "'";
+    $sql = "INSERT INTO records (email, origin, destination) VALUES ('" . $_POST["email"] . "', '" . $_POST["origin"] . "', '" . $_POST["destination"] + "')";
     
     $stmt = $conn->prepare($sql);
     $stmt->execute();
