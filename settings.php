@@ -44,6 +44,10 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script>
         /* global $ */
+        var model;
+        var make;
+        var city;
+        var highway;
         $(document).ready(function()
         {
         $.ajax
@@ -105,8 +109,7 @@
           } 
           });
         });
-            
-        $("#button").on("click", function()
+        $("#year").change(function()
         {
           $("#cityMpg").html("City MPG: ")
           $("#highwayMpg").html("Highway MPG: ")
@@ -114,8 +117,8 @@
             var selectedModel = $("#model").val();
             var selectedYear = $("#year").val();
             
-            var model = selectedModel.toLowerCase();
-            var make = selectedMake.toLowerCase();
+            model = selectedModel.toLowerCase();
+            make = selectedMake.toLowerCase();
             var key1 = "MLAC6TRTY2RAC09";
            $.ajax
           ({
@@ -132,6 +135,8 @@
                 {
                   $("#highwayMpg").html("Highway MPG: " + data['attributes']['highway_mileage']);
                   $("#cityMpg").html("City MPG: " + data['attributes']['city_mileage']);
+                  highway = data['attributes']['highway_mileage'];
+                  city = data['attributes']['city_mileage'];
                 }
                 else
                 {
@@ -140,14 +145,35 @@
                 }
                 
             } ,
+            
           });
           
+
           
         });
-        
-        
-                  
-                 
+        $("#button").on("click", function()
+        {
+          $.ajax
+          ({
+            type:"POST",
+            url: "api/car.php",
+            dataType:"json",
+            data:
+            {
+               "highway": parseInt(highway.substr(0,2)),
+               "city": parseInt(city.substr(0,2)),
+               "make": make,
+               "model": model,
+               "year": $("#year").val(),
+            },
+            success:function(data, status)
+            {
+                
+                
+            } ,
+            
+          });
+        });
   </script>
 </body>
 
