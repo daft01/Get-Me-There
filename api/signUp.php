@@ -18,8 +18,8 @@
     {
       $hashedPassword = password_hash($_POST['password'], PASSWORD_BCRYPT, $options);
          // INSERT INTO `users`(`email`, `password`, `first_name`, `last_name`, `phone_number`, `city_mileage`, `freeway_mileage`, `birthday`) VALUES ( "j2@csumb.edu", "abc", "Jessi","Rios",8311234567,23,32,"19901231")
-      $sql = "INSERT INTO `user`(`email`, `password`, `first_name`, `last_name`, `phone_number`, `city_mileage`, `freeway_mileage`)
-                         VALUES (:email, :password, :first_name, :last_name, :phone_number, :city_mileage, :freeway_mileage)";
+      $sql = "INSERT INTO `user`(`email`, `password`, `first_name`, `last_name`, `phone_number`)
+                         VALUES (:email, :password, :first_name, :last_name, :phone_number)";
                         // INSERT INTO `user`(`email`, `password`, `first_name`, `last_name`, `phone_number`, `city_mileage`, `freeway_mileage`) VALUES ("rios@gmail.com","abc","Jess","rios",8315121212],23,23)
       
       $stmt = $conn->prepare($sql);
@@ -28,9 +28,7 @@
         ":password" => $hashedPassword,
         "first_name" => $_POST['first_name'],
         "last_name" => $_POST['last_name'],
-        "phone_number" => $_POST['phone_number'],
-        ":city_mileage" => $_POST['city_mileage'],
-        ":freeway_mileage" => $_POST['freeway_mileage']
+        "phone_number" => $_POST['phone_number']
         ));
       
       $_SESSION["email"] = $_POST['email'];

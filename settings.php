@@ -175,7 +175,7 @@
             {
               console.log(data);
               if(data){
-                window.location = "../Get-Me-There/index.html";
+                window.location = "../Get-Me-There/index.php";
                 console.log("Account deleted.");
               }
               else{

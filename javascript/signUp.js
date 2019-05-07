@@ -125,8 +125,6 @@ $("#signupButton").on('click', function(e) {
             "first_name": $("input[name='first_name']").val(),
             "last_name": $("input[name='last_name']").val(),
             "phone_number": $("input[name='phone_number']").val(),
-            "city_mileage": $("input[name='city_mileage']").val(),
-            "freeway_mileage": $("input[name='freeway_mileage']").val(),
             
         },
         success: function(data, status) {
