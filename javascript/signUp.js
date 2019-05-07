@@ -125,7 +125,6 @@ $("#signupButton").on('click', function(e) {
             "first_name": $("input[name='first_name']").val(),
             "last_name": $("input[name='last_name']").val(),
             "phone_number": $("input[name='phone_number']").val(),
-            
         },
         success: function(data, status) {
             console.log(data);
