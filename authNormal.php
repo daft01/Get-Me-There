@@ -13,7 +13,7 @@
     return $stmt->fetchColumn();
    }
 
-    function matchingPassword($pdo, $pwd){
+    function matchingPassword($pdo, $pwd,$email){
         $stmt = $pdo->prepare("SELECT password from user WHERE email=?");
         $stmt->execute([$pwd]); 
         return $stmt->fetchColumn();
@@ -27,7 +27,7 @@
     $passw= $_POST["password"];
 
     if (emailExists($db,$email)) {
-        if(matchingPassword($db,$passw)){
+        if(matchingPassword($db,$passw, $email)){
             echo "logged in";
         }
         else{
