@@ -32,14 +32,14 @@ session_start();
     
 
     <h1>Sign In Page</h1>
-  <label>Username: </label>  <input id="username" type="text"></input>
+  <label>Email: </label>  <input id="username" type="text"></input>
   <br />
   <br />
 
-  <label>Password: </label>  <input id="pswd" type="text"></input>
+  <label>Password: </label>  <input id="pswd" type="password"></input>
   <br />
   <br />
-<button id="normalS">Sign In</button>
+<button id="normalS" onclick= "normalSignin()">Sign In</button>
 <div class="g-signin2" data-onsuccess="onSignIn"></div>
 <div class="fb-login-button" data-width="" data-size="medium" data-button-type="login_with" data-auto-logout-link="true" data-use-continue-as="false"></div>
     <a href="#" onclick="signOut();">Sign out</a>
@@ -48,6 +48,22 @@ session_start();
 
     <script>
     var email;
+    function normalSignin() {
+      var email= $("#username").val();
+      var pass= $("#pswd").val();
+      
+       $.ajax({
+          type: "POST",
+          url: "authNormal.php",
+          data: { "email": email,"password":pass },
+          success: function(){},
+          dataType: "json"
+          
+    });
+
+
+      
+    }
     function onSignIn(googleUser) {
       
     var profile = googleUser.getBasicProfile();

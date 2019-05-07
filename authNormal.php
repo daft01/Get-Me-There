@@ -13,23 +13,37 @@
     return $stmt->fetchColumn();
    }
 
+    function matchingPassword($pdo, $pwd){
+        $stmt = $pdo->prepare("SELECT password from user WHERE email=?");
+        $stmt->execute([$pwd]); 
+        return $stmt->fetchColumn();
+
+    }
     //  $options = [ 'cost' => 11 ];
         //   $hashedPassword = password_hash($_POST['password'], PASSWORD_BCRYPT, $options);
 
 
     $email= $_POST["email"];
+    $passw= $_POST["password"];
 
     if (emailExists($db,$email)) {
-        echo "found";
+        if(matchingPassword($db,$passw)){
+            echo "logged in";
+        }
+        else{
+            echo "wrong password";
+        }
+
     }  
     else{
-         $query = "INSERT into user (email, password, first_name, last_name)
-    values('".$_POST["email"]."','".$_POST["pass"]."','".$_POST["firstname"]."','".$_POST["lastname"]."')"; 
-     $statement = $db->prepare($query);
-    $statement->execute();
+        echo "this account does not exist";
+    //      $query = "INSERT into user (email, password)
+    // values('".$_POST["email"]."','".$_POST["pass"]."','".$_POST["firstname"]."','".$_POST["lastname"]."')"; 
+    //  $statement = $db->prepare($query);
+    // $statement->execute();
     
-    $records= $statement->fetchAll(PDO::FETCH_ASSOC);
-    echo json_encode($records);
+    // $records= $statement->fetchAll(PDO::FETCH_ASSOC);
+    // echo json_encode($records);
       
     }
     $_SESSION["email"] = $_POST["email"];
