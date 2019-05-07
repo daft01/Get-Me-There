@@ -22,6 +22,7 @@ var options = {
     scrollwheel: false,
 };
 
+
 map = new google.maps.Map(document.getElementById('map'), options);
 infoWindow = new google.maps.InfoWindow;
     
@@ -128,6 +129,23 @@ function checkRoute(){
     if( !originValid || !destinationValid)
         return;
 
+    $.ajax({
+        type: "POST",
+        url: "api/addRecord.php",
+        dataType: "json",
+        data: {
+          email : "dm93927@gmail.com",
+          origin : originName,
+          destination : destinationName
+        },
+        success: function (data) {
+          console.log(data);
+        },
+        error: function(err) {
+            console.log(arguments);
+        }
+    });
+
     map = new google.maps.Map(document.getElementById('map'), options);
     directionsDisplay.setMap(map);
     
@@ -175,6 +193,24 @@ function setOption( option ){
             distance.innerHTML = "<strong>Distance: </strong>" + info["distance"]["text"]
             document.getElementById(option).appendChild(distance);
             
+            if(option == "DRIVING"){
+                
+                $.ajax({
+                    type: "GET",
+                    url: "api/getInfo.php",
+                    dataType: "json",
+                    data: {
+                      email : "dm93927@gmail.com"
+                    },
+                    success: function (data) {
+                      console.log(data);
+                    },
+                    error: function(err) {
+                        console.log(arguments);
+                    }
+                });
+                
+            }
             if(option == "TRANSIT"){
                 console.log(result);
                 

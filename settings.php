@@ -1,49 +1,84 @@
+
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Settings</title>
+ 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="css/setting.css">
   
   <style>
-
   </style>
 </head>
 
 <body id="dummybodyid">
-
-  <form>
-    <fieldset>
-      <label>Make: </label>
-      <select id="make">
+  <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="home.php">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php">Map</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="sittings.php">Settings</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="signIn.php">Sign In</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="signUp.html">Sign Up</a>
+      </li>
+  </ul>
+    <div id="container">
+      <form>
+        <fieldset>
+          <label>Make: </label>
+          <select id="make" class="selectpicker" data-live-search="true">
+              
+          </select>
+          <br><br>
+          <label>Model: </label>
+          <select id="model" class="selectpicker" data-live-search="true" >
+            
+              
+          </select>
           
-      </select>
-      <br>
-      <label>Model: </label>
-      <select id="model">
-        
+          <br><br>
           
-      </select>
+          <label>Year: </label>
+          <select id ="year" class="selectpicker" data-live-search="true">
+            
+          </select>
+          <br><br>
+          
+          <div>
+            <h4 id= "cityMpg">City MPG: </h1>
+            <h4 id= "highwayMpg">Highway MPG: </h1>
+          </div>
+          
+          <button type = button id = "button" class="btn btn-outline-success">Add Car</button>
+          <button type = button id="deleteButton" class="btn btn-outline-danger"> Delete Account</button>
+          <div id="container"> </div>
+            
+        </fieldset>
+      </form>
       
-      <br>
-      
-      <label>Year: </label>
-      <select id ="year">
-        
-      </select>
-      <br>
-      
-      <div>
-        <h4 id= "cityMpg">City MPG: </h1>
-        <h4 id= "highwayMpg">Highway MPG: </h1>
-      </div>
-      
-      <button type = button id = "button">submit</button>
-      <div id="container"> </div>
-        
-    </fieldset>
-  </form>
+  </div>
+  
 
+  
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script>
         /* global $ */
+        var model;
+        var make;
+        var city;
+        var highway;
+        
         $(document).ready(function()
         {
         $.ajax
@@ -64,6 +99,7 @@
                     {
                         $("#make").append('<option>' + data["Results"][i]["Make_Name"] + '</option>');
                     }
+                   $('.selectpicker').selectpicker('refresh');
                     
                 // });
                 
@@ -73,6 +109,7 @@
           } 
           });
         });
+        
         $("#make").change(function()
         {
             $("#model").html("")
@@ -98,6 +135,7 @@
                 {
                   $("#year").append('<option>' + (1990 + i) + '</option>');
                 }
+                $('.selectpicker').selectpicker('refresh');
                 
             } ,
           complete: function(status, err){
@@ -105,8 +143,8 @@
           } 
           });
         });
-            
-        $("#button").on("click", function()
+        
+        $("#year").change(function()
         {
           $("#cityMpg").html("City MPG: ")
           $("#highwayMpg").html("Highway MPG: ")
@@ -114,8 +152,8 @@
             var selectedModel = $("#model").val();
             var selectedYear = $("#year").val();
             
-            var model = selectedModel.toLowerCase();
-            var make = selectedMake.toLowerCase();
+            model = selectedModel.toLowerCase();
+            make = selectedMake.toLowerCase();
             var key1 = "MLAC6TRTY2RAC09";
            $.ajax
           ({
@@ -132,6 +170,8 @@
                 {
                   $("#highwayMpg").html("Highway MPG: " + data['attributes']['highway_mileage']);
                   $("#cityMpg").html("City MPG: " + data['attributes']['city_mileage']);
+                  highway = data['attributes']['highway_mileage'];
+                  city = data['attributes']['city_mileage'];
                 }
                 else
                 {
@@ -140,14 +180,59 @@
                 }
                 
             } ,
+            
           });
           
           
         });
         
+        $("#deleteButton").on("click", function()
+        {
+          $.ajax
+          ({
+            type:"POST",
+            url:"api/deleteAccount.php",
+            dataType: "text",
+            data: 
+            {
+            },
+            success: function(data)
+            {
+              console.log(data);
+              if(data){
+                window.location = "../Get-Me-There/index.html";
+                console.log("Account deleted.");
+              }
+              else{
+                console.log("Account was not deleted.");
+              }
+            }
+          });
+        });
         
-                  
-                 
+        $("#button").on("click", function()
+        {
+          $.ajax
+          ({
+            type:"POST",
+            url: "api/car.php",
+            dataType:"json",
+            data:
+            {
+               "highway": parseInt(highway.substr(0,2)),
+               "city": parseInt(city.substr(0,2)),
+               "make": make,
+               "model": model,
+               "year": $("#year").val(),
+            },
+            success:function(data, status)
+            {
+                
+            } ,
+            
+          });
+        });
+        
   </script>
 </body>
 
