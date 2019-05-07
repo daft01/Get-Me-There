@@ -183,6 +183,7 @@ function setOption( option ){
 
             var title = document.createElement('div');
             title.innerHTML = option;
+            title.setAttribute("class", "optionTitle");
             document.getElementById(option).appendChild(title);
             
             var duration = document.createElement('div');
@@ -262,7 +263,7 @@ function addTripClicked(){
     
     var trip = document.createElement('div');
     trip.setAttribute("class", "trip");
-    trip.innerHTML = "<div class='tripLocation'> From: " + originName + "</div>" + "<div class='tripLocation'> To: " + destinationName + "</div>";
+    trip.innerHTML = "<div class='tripLocation'> <span class=yellow> From: </span> " + originName + "</div>" + "<div class='tripLocation'> <span class=yellow> To: </span>  " + destinationName + "</div>";
 
     
     document.getElementById("trips").appendChild(trip);
