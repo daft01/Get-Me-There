@@ -267,6 +267,25 @@ function addTripClicked(){
 
     
     document.getElementById("trips").appendChild(trip);
+    
+    $.ajax({
+        type: "POST",
+        url: "api/addTrip.php",
+        dataType: "json",
+        data: {
+          email : "dm93927@gmail.com",
+          origin : originName,
+          destination : destinationName
+        },
+        success: function (data) {
+          console.log(data);
+          console.log(data);
+        },
+        error: function(err) {
+            console.log(arguments);
+            console.log("erros");
+        }
+    });
 }
 
 function detailsButtonClicked(id){
