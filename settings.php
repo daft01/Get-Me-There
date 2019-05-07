@@ -1,53 +1,77 @@
-<?php
-  session_start();
-?>
+
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Settings</title>
+ 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="css/setting.css">
   
   <style>
-
   </style>
 </head>
 
 <body id="dummybodyid">
-
-  <form>
-    <fieldset>
-      <label>Make: </label>
-      <select id="make">
+  <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="home.php">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php">Map</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="sittings.php">Settings</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="signIn.php">Sign In</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="signUp.html">Sign Up</a>
+      </li>
+  </ul>
+    <div id="container">
+      <form>
+        <fieldset>
+          <label>Make: </label>
+          <select id="make" class="selectpicker" data-live-search="true">
+              
+          </select>
+          <br><br>
+          <label>Model: </label>
+          <select id="model" class="selectpicker" data-live-search="true" >
+            
+              
+          </select>
           
-      </select>
-      <br>
-      <label>Model: </label>
-      <select id="model">
-        
+          <br><br>
           
-      </select>
+          <label>Year: </label>
+          <select id ="year" class="selectpicker" data-live-search="true">
+            
+          </select>
+          <br><br>
+          
+          <div>
+            <h4 id= "cityMpg">City MPG: </h1>
+            <h4 id= "highwayMpg">Highway MPG: </h1>
+          </div>
+          
+          <button type = button id = "button" class="btn btn-outline-success">Add Car</button>
+          <button type = button id="deleteButton" class="btn btn-outline-danger"> Delete Account</button>
+          <div id="container"> </div>
+            
+        </fieldset>
+      </form>
       
-      <br>
-      
-      <label>Year: </label>
-      <select id ="year">
-        
-      </select>
-      <br>
-      
-      <div>
-        <h4 id= "cityMpg">City MPG: </h1>
-        <h4 id= "highwayMpg">Highway MPG: </h1>
-      </div>
-      
-      <button type = button id = "button">submit</button>
-      <div id="container"> </div>
-        
-    </fieldset>
-  </form>
+  </div>
   
-  <button type = button id="deleteButton"> Delete Account</button>
+
   
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script>
         /* global $ */
         var model;
@@ -75,6 +99,7 @@
                     {
                         $("#make").append('<option>' + data["Results"][i]["Make_Name"] + '</option>');
                     }
+                   $('.selectpicker').selectpicker('refresh');
                     
                 // });
                 
@@ -110,6 +135,7 @@
                 {
                   $("#year").append('<option>' + (1990 + i) + '</option>');
                 }
+                $('.selectpicker').selectpicker('refresh');
                 
             } ,
           complete: function(status, err){
@@ -157,7 +183,6 @@
             
           });
           
-
           
         });
         
@@ -175,7 +200,7 @@
             {
               console.log(data);
               if(data){
-                window.location = "../Get-Me-There/index.php";
+                window.location = "../Get-Me-There/index.html";
                 console.log("Account deleted.");
               }
               else{

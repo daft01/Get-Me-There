@@ -1,0 +1,12 @@
+#container {
+   width: 50%;
+   margin-left: 40%;
+   margin-top:10%;
+   padding-bottom: 50px;
+   padding-left: 20px;
+   padding-right: 10px;
+}
+.nav
+{
+   justify-content:flex-end;
+}
