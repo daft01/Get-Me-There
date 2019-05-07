@@ -227,3 +227,9 @@ Stack trace:
 #0 /home/ubuntu/workspace/project/Get-Me-There/api/getInfo.php(9): PDOStatement->execute()
 #1 {main}
   thrown in /home/ubuntu/workspace/project/Get-Me-There/api/getInfo.php on line 9
+[07-May-2019 03:02:11 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:10
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(10): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getInfo.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 10

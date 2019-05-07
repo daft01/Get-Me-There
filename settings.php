@@ -3,10 +3,11 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Settings</title>
- 
+  
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
   <link rel="stylesheet" href="css/setting.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
   
   <style>
   </style>
@@ -15,19 +16,19 @@
 <body id="dummybodyid">
   <ul class="nav">
       <li class="nav-item">
-        <a class="nav-link" href="home.php">Home</a>
+        <a class="nav-link" style="font-family: 'Source Serif Pro', serif; font-size:1.6em;" href="home.php">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="index.php">Map</a>
+        <a class="nav-link" style="font-family: 'Source Serif Pro', serif; font-size:1.6em;" href="index.php">Map</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="sittings.php">Settings</a>
+        <a class="nav-link active"  style="font-family: 'Source Serif Pro', serif; font-size:1.6em;"href="sittings.php" id="blue">Settings</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="signIn.php">Sign In</a>
+        <a class="nav-link"  style="font-family: 'Source Serif Pro', serif; font-size:1.6em;"href="signIn.php">Sign In</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="signUp.html">Sign Up</a>
+        <a class="nav-link" style="font-family: 'Source Serif Pro', serif; font-size:1.6em;"href="signUp.html">Sign Up</a>
       </li>
   </ul>
     <div id="container">

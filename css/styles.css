@@ -10,3 +10,12 @@
 input{
     width: 200px;
 }
+
+.nav
+{
+   justify-content:flex-end;
+}
+#blue
+{
+   border-bottom:2px blue solid;
+}
