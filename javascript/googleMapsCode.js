@@ -263,20 +263,7 @@ function addTripClicked(){
     var trip = document.createElement('div');
     trip.setAttribute("class", "trip");
     trip.innerHTML = "<div class='tripLocation'> From: " + originName + "</div>" + "<div class='tripLocation'> To: " + destinationName + "</div>";
-    
-    var detailsButton = document.createElement('button');
-    var deleteButton = document.createElement('button');
-    
-    detailsButton.setAttribute("class", "detailsButton");
-    detailsButton.setAttribute("onclick", "detailsButtonClicked(this.id)");
-    detailsButton.innerHTML = "DETAILS";
-    
-    deleteButton.setAttribute("class", "deleteButton");
-    deleteButton.setAttribute("onclick", "deleteButtonClicked(this.id)");
-    deleteButton.innerHTML = "DELETE";
-    
-    trip.appendChild(detailsButton);
-    trip.appendChild(deleteButton);
+
     
     document.getElementById("trips").appendChild(trip);
 }
