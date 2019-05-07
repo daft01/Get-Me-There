@@ -8,13 +8,13 @@
     // $query = "INSERT into user_data (email, password, first_name, last_name)
     // values('".$_POST["email"]."','".$_POST["pass"]."','".$_POST["firstname"]."','".$_POST["lastname"]."')"; 
    function emailExists($pdo, $email) {
-    $stmt = $pdo->prepare("SELECT 1 FROM user WHERE email=?");
+    $stmt = $pdo->prepare("SELECT 1 FROM users WHERE email=?");
     $stmt->execute([$email]); 
     return $stmt->fetchColumn();
    }
 
-    function matchingPassword($pdo, $pwd){
-        $stmt = $pdo->prepare("SELECT password from user WHERE email=?");
+    function matchingPassword($pdo, $pwd,$email){
+        $stmt = $pdo->prepare("SELECT password from users WHERE email=?");
         $stmt->execute([$pwd]); 
         return $stmt->fetchColumn();
 
@@ -27,7 +27,7 @@
     $passw= $_POST["password"];
 
     if (emailExists($db,$email)) {
-        if(matchingPassword($db,$passw)){
+        if(matchingPassword($db,$passw, $email)){
             echo "logged in";
         }
         else{
