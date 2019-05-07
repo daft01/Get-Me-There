@@ -139,7 +139,6 @@ function checkRoute(){
           destination : destinationName
         },
         success: function (data) {
-           
           console.log(data);
         },
         error: function(err) {
@@ -194,6 +193,24 @@ function setOption( option ){
             distance.innerHTML = "<strong>Distance: </strong>" + info["distance"]["text"]
             document.getElementById(option).appendChild(distance);
             
+            if(option == "DRIVING"){
+                
+                $.ajax({
+                    type: "GET",
+                    url: "api/getInfo.php",
+                    dataType: "json",
+                    data: {
+                      email : "dm93927@gmail.com"
+                    },
+                    success: function (data) {
+                      console.log(data);
+                    },
+                    error: function(err) {
+                        console.log(arguments);
+                    }
+                });
+                
+            }
             if(option == "TRANSIT"){
                 console.log(result);
                 
@@ -263,22 +280,6 @@ function addTripClicked(){
     
     document.getElementById("trips").appendChild(trip);
 }
-
-$.ajax({
-    type: "GET",
-    url: "api/getInfo.php",
-    dataType: "json",
-    data: {
-      email : "dm93927@gmail.com"
-    },
-    success: function (data) {
-       
-      console.log(data);
-    },
-    error: function(err) {
-        console.log(arguments);
-    }
-});
 
 function detailsButtonClicked(id){
     

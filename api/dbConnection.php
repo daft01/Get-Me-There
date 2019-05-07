@@ -1,16 +1,30 @@
 <?php
 
-function getDatabaseConnection($dbname = 'get_me_there'){
+function getDatabaseConnection($db = 'get_me_there'){
     
-    $host = 'localhost';
+    $host = "localhost";
+     $user = "root";
+     $pass = "";
+     $db = "get_me_there"; 
     
-    $username = 'root';
-    $password = '';
+     //checking whether the URL contains "herokuapp" (using Heroku)
+    if(strpos($_SERVER['HTTP_HOST'], 'herokuapp') !== false) {
+        $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+        $host = $url["host"];
+        $db = substr($url["path"], 1);
+        $user = $url["user"];
+        $pass = $url["pass"];
+    }
     
-    $dbConn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $dsn = "mysql:host=$host;dbname=$db";
     
-    $dbConn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $opt = [
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES => false,
+    ];
     
-    return $dbConn;
+    $pdo = new PDO($dsn, $user, $pass, $opt);
+    return $pdo;
 }
 ?>
