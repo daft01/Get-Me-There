@@ -6,4 +6,13 @@
 [08-May-2019 02:13:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/FinalProject/Get-Me-There/api/car.php:0
 [08-May-2019 02:15:21 UTC] PHP Fatal error:  Call to undefined function getDBConnection() in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/car.php on line 5
 [08-May-2019 02:15:21 UTC] PHP Stack trace:
-[08-May-2019 02:15:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/FinalProject/Get-Me-There/api/car.php:0
+[08-May-2019 02:15:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/FinalProject/Get-Me-There/api/car.php:0[08-May-2019 04:26:57 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'get_me_there.trips' doesn't exist' in /home/ubuntu/workspace/Get-Me-There/api/getTrips.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/Get-Me-There/api/getTrips.php(8): PDO->prepare('SELECT * FROM t...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Get-Me-There/api/getTrips.php on line 8
+[08-May-2019 04:27:00 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'get_me_there.trips' doesn't exist' in /home/ubuntu/workspace/Get-Me-There/api/getTrips.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/Get-Me-There/api/getTrips.php(8): PDO->prepare('SELECT * FROM t...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Get-Me-There/api/getTrips.php on line 8
