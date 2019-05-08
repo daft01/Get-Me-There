@@ -11,7 +11,70 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/styles.css">
     <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+      }
       
+      .navbar {
+        overflow: hidden;
+        background-color: #333;
+      }
+      
+      .navbar a {
+        float: right;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      .dropdown {
+        float: right;
+        overflow: hidden;
+      }
+      
+      .dropdown .dropbtn {
+        font-size: 16px;  
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+      
+      .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: red;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: right;
+      }
+      
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
       #container{
         width: 1500px;
         margin: 0 auto;
@@ -87,10 +150,22 @@
     </style>
   </head>
   <body>
-      
-      
-    <button id="JessicaButton"> <a href="settings.php">Jessica's Button</a> </button>
     
+    <div class="navbar">
+      <a href="#home">Home</a>
+      <a href="#news">News</a>
+      <div class="dropdown">
+        <button class="dropbtn">Dropdown 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div> 
+    </div>
+
     <div id="container">
       <div id="locations">
         <label for="origin">Origin: </label>
@@ -114,15 +189,13 @@
         	</div>
         </div>
         
-        
         <div id="trips">
           <div id="tripTitle">Trips</div>
             
         </div>
       </div>
     </div>
-    
-        <div id = "email">
+      <div id = "email">
       <?= $email ?>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -130,4 +203,4 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0vzljkSDp7Hk3CWIytTfZJEM8jS-UooU&libraries=places"></script>
     <script type="text/javascript" src="javascript/googleMapsCode.js"></script>
   </body>
-</html>\
+</html>
