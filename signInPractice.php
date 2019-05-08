@@ -23,30 +23,13 @@ session_start();
 
 
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/signin.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/signin.css">
+
 
   </head>
   <body>
     
-    
-
-<!--    <h1>Sign In Page</h1>-->
-<!--  <label>Email: </label>  <input id="username" type="text"></input>-->
-<!--  <br />-->
-<!--  <br />-->
-
-<!--  <label>Password: </label>  <input id="pswd" type="password"></input>-->
-<!--  <br />-->
-<!--  <br />-->
-<!--  <div id="result"></div>-->
-<!--<button id="normalS" onclick= "normalSignin()">Sign In</button>-->
-<!--<div class="g-signin2" data-onsuccess="onSignIn"></div>-->
-<!--<div class="fb-login-button" data-width="" data-size="medium" data-button-type="login_with" data-auto-logout-link="true" data-use-continue-as="false"></div>-->
-<!--    <a href="#" onclick="signOut();">Sign out</a>-->
-
-
     <div class="container">
     <div class="row">
       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
@@ -73,8 +56,9 @@ session_start();
     </div>
   </div>
 
-
-  
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/brands.js" integrity="sha384-sCI3dTBIJuqT6AwL++zH7qL8ZdKaHpxU43dDt9SyOzimtQ9eyRhkG3B7KMl6AO19" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script>
@@ -117,7 +101,7 @@ session_start();
       
     });
     }
-
+    
     function onSignIn(googleUser) {
       
     var profile = googleUser.getBasicProfile();
