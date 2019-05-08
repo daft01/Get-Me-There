@@ -251,3 +251,13 @@ Stack trace:
 #1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/addTrip.php(4): getDatabaseConnection('get_me_there')
 #2 {main}
   thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:16:37 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'get_me_there.trips' doesn't exist' in /home/ubuntu/workspace/Get-Me-There/api/getTrips.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/Get-Me-There/api/getTrips.php(8): PDO->prepare('SELECT * FROM t...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Get-Me-There/api/getTrips.php on line 8
+[08-May-2019 00:21:57 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'heroku_42b1ec32cf47072.trips' doesn't exist' in /home/ubuntu/workspace/Get-Me-There/api/getTrips.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/Get-Me-There/api/getTrips.php(8): PDO->prepare('SELECT * FROM t...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Get-Me-There/api/getTrips.php on line 8
