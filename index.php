@@ -1,17 +1,9 @@
-<?php
-  session_start();
-  $email = $_SESSION['email'];
-?>
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Get Me There</title>
-    <meta name="viewport" content="initial-scale=1.0">
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-      body {
+    <head>
+        <title>Home</title>
+        <style>
+            body {
         font-family: Arial, Helvetica, sans-serif;
         margin: 0;
       }
@@ -51,7 +43,7 @@
       }
       
       .navbar a:hover, .dropdown:hover .dropbtn {
-        background-color: red;
+        background-color: purple;
       }
       
       .dropdown-content {
@@ -74,89 +66,97 @@
       }
       
       .dropdown-content a:hover {
-        background-color: purple;
+        background-color: #ddd;
       }
       
       .dropdown:hover .dropdown-content {
         display: block;
       }
-      #container{
-        width: 1500px;
-        margin: 0 auto;
+      .top{
+        /*position:relative;*/
       }
-      #mapContainer{
+      .slogan {
+        color:#0000ff;
+        font-size:5em;
+        font-weight:bold;
+      font-family: 'Playfair Display SC', serif;
+
+       position: absolute;
+      top: 58%;
+      left: 57%;
+      transform: translate(-50%, -50%);
+}
+      .container{
         display: flex;
+  flex-direction: column;
       }
-      #trips{
-        width: 100%;
-        background-color: black;
-          font-size: 1.5em;
-        color: white;
-        margin-left: 10px;
-          height: 1000px;
+      /*.container > div {*/
+        /*width: 100px;*/
+        /*margin: 10px;*/
+      /*  text-align: center;*/
+      /*  line-height: 75px;*/
+      /*  font-size: 30px;*/
+      /*}*/
+      .taxiImage{
+          opacity: 0.6;
+
       }
-      #tripTitle{
+      .weAre, .underM{
         width: 100%;
+        height: 350px;
+        background-color: #edb982;
+      }
+      .missTop, .miss{
+        font-family: 'Nanum Gothic', sans-serif;
+
+          padding-top: 50px;
+            font-size: 30px;
+
+          text-align: center;
+
+      }
+      .middleMiss{
+        display: flex;
+        flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+                  text-align: center;
+
+
+
+
+      }
+      .middleMiss > div {
+        background-color: #f1f1f1;
+        margin: 10px;
+        padding: 150px;
+        font-size: 30px;
         text-align: center;
-        font-size: 3em;
+                  justify-content: center;
+
       }
-      #locations{
-        font-size: 2.5em;
-        margin-bottom: 20px;
-      }
-      input{
-        font-size: .7em;
-        width: 300px;
-      }
-      #optionsContainer{
-        font-size: 1.4em;
-        margin: 5px;
-      }
-      #addTrip{
-        width: 200px;
-        height: 50px;
-        font-size: .5em;
-        border-radius: 5px;
-          background-color: purple;
-          color: white;
-      }
-      .option{
-        margin: 5px;
-      }
-        .yellow{
-            color: yellow;
-        }
+      .idea, .journey, .idea{
+        text-align: center;
+                          justify-content: center;
+
+
         
-        .trip{
-            border-bottom: 5px solid yellow;
-        }
-        .tripLocation{
-            padding: 10px;
-        }
-        .optionTitle{
-            text-align: center;
-        }
-        #DRIVING{
-            flex-basis: 25%;
-            flex-grow: 0;
-        }
-        #WALKING{
-            flex-basis: 25%;
-            flex-grow: 0;
-        }
-        #BICYCLING{
-            flex-basis: 25%;
-            flex-grow: 0;
-        }
-        #TRANSIT{
-            flex-basis: 25%;
-            flex-grow: 0;
-        }
-    </style>
-  </head>
-  <body>
-    
-    <div class="navbar">
+      }
+        </style>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Zeta Template Project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+    </head>
+    <body>
+      
+        <div class="navbar">
       <div class="dropdown">
         <button class="dropbtn">Account
           <i class="fa fa-caret-down"></i>
@@ -170,43 +170,68 @@
       <a href="map.php">Map</a>
       <a href="index.php">Home</a>
     </div>
+    
 
-    <div id="container">
-      <div id="locations">
-        <label for="origin">Origin: </label>
-        <input class="form-control" id="origin" type="text" placeholder="Current Location">
+	<!--<div class ="bigContainer">-->
+	<!--	<div class="main_slider_item_bg" style="background-image:url(images/taxis.jpg)"></div>-->
+	<!--		<div class="main_slider_shapes"><img src="images/taxis.jpg" alt="" style="width: 100% !important;"></div>-->
+
+	<!--</div>-->
+	
+	<div class="container">
+	  
+	  <div class="top">
+	    <img class ="taxiImage" src="images/taxis.jpg"  style="width:100%;">
   
-        <label for="destination">Destination: </label>
-        <input class="form-control" id="destination" type="text" placeholder="Search">
-          
-        <button id="addTrip" onclick="addTripClicked()">Add to trips</button>
-      </div>
-      
-      <div id="mapContainer">
-        <div>
-          <div id="map"></div>
-          
-        	<div id="optionsContainer">
-        		<div id="DRIVING" class="option" onclick="optionClicked(this.id)"></div>
-        		<div id="WALKING" class="option" onclick="optionClicked(this.id)"></div>
-        		<div id="BICYCLING" class="option" onclick="optionClicked(this.id)"></div>
-        		<div id="TRANSIT" class="option" onclick="optionClicked(this.id)"></div>
-        	</div>
-        </div>
-        
-        <div id="trips">
-          <div id="tripTitle">Trips</div>
+    <div class ="slogan" style="width:70%;">A better way for transportation</div>
+	  </div>
+	  
+  <div class="underM">
+    <div class="weAre" style="width:100%; height:100%">
+      <div class="missTop">Our Mission: </div>
+            <div class="miss">To bring an easier outlet to find forms of transportation. We know how annoying it may be to try and find the 
+            the fastest or most efficient, therefore we provide a tool to facilitate the planning.</div>
             
-        </div>
-      </div>
+
+      
+      
+      
     </div>
-      <div id = "email">
-      <?= $email ?>
+    
+  </div>
+  
+  <div class="middleMiss">
+    <div class="idea">
+      	    <img class ="ideaImg" src="images/idea.png"  style="  width: 100px; heigh:50px; margin: 10px;">
+      	                	    <br><br>
+
+      	    Think It.
+
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0vzljkSDp7Hk3CWIytTfZJEM8jS-UooU&libraries=places"></script>
-    <script type="text/javascript" src="javascript/googleMapsCode.js"></script>
-    <script type="text/javascript" src="javascript/login.js"></script>
-  </body>
+    <div class="plan">
+            	    <img class ="planImg" src="images/plan.png"  style=" width: 100px; margin: 10px;">
+            	    <br><br>
+            	    Plan It.
+
+    </div>
+    <div class="journey">
+            	    <img class ="journeyImg" src="images/journey.png"  style=" width: 100px; margin: 10px;">
+            	                	    <br><br>
+
+            	    Travel.
+
+    </div>
+    
+  </div>
+    
+    
+</div>
+
+
+  
+			
+
+				
+
+    </body>
 </html>
