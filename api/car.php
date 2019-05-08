@@ -1,6 +1,7 @@
 <?php
-
+    
     include 'dbConnection.php';
+    session_start();
     
     $conn = getDatabaseConnection();
     $sql = "SELECT * FROM `cars`";
@@ -16,7 +17,6 @@
     }
     else
     {
-        
         $sql = "UPDATE `cars` SET `email`='" . $_POST['email'] . "',`model`='". $_POST['model']. "', `year`=". $_POST['year'] . " ,`highway`=" . $_POST['highway'] . ",`city`=" . $_POST['city'] . ",`made`='" . $_POST['make'] ."' WHERE 1";
         echo $sql;
     }

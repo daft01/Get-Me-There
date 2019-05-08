@@ -6,11 +6,8 @@
     $email = ($_SESSION['email']);
   }else{
     $email = "";
+    //header("Location: login.html");
   }
-  
-    //   if (!isset($_SESSION['email'])){
-    //   header("Location: login.html");
-    // }
 ?>
 
 <!DOCTYPE html>
@@ -175,7 +172,7 @@
           </button>
           <div class="dropdown-content">
             <a href="settings.php">Settings</a>
-            <a href="api/signOut">Sign Out</a>
+            <a href="signOut.php">Sign Out</a>
             <a href="delete.php">Delete Account</a>
           </div>
         </div> 
