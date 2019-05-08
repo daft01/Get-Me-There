@@ -1,10 +1,11 @@
 <?php
 
-    include '../dbConnection.php';
+    include 'dbConnection.php';
     
-    $conn = getDatabaseConnection("car");
+    $conn = getDBConnection();
     
-    $sql = "INSERT INTO `car_info`(`make`, `model`, `year`, `highway`, `city`) VALUES ('". $_POST['make'] . "', '" . $_POST['model'] . "', " . $_POST['year'] . ", " . $_POST['highway'] . ", " . $_POST['city'] . ")";
+    $sql = "INSERT INTO `cars`(`email`, `model`, `year`, `highway`, `city`, `made`) VALUES ('hello123@gmail.com', '". $_POST['model'] . "', " . $_POST['year'] . ", " . $_POST['highway'] . ", " . $_POST['city'] . " , '" . $_POST['make'] . "')";
+    echo $sql;
     $stmt = $conn->prepare($sql);
     $stmt->execute();
 ?>
