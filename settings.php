@@ -22,23 +22,6 @@
 
 <body id="dummybodyid">
   
-    <div class="navbar">
-      <div id="login">
-        <div class="dropdown">
-          <button class="dropbtn">Account
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="settings.php">Settings</a>
-            <a href="api/signOut">Sign Out</a>
-            <a href="delete.php">Delete Account</a>
-          </div>
-        </div> 
-      </div>
-      <a href="map.php">Map</a>
-      <a href="index.php">Home</a>
-      <img class="logoImg" src="images/logoWhite.png" style="width:160px; height:65px;"> 
-    </div>
 
     <div id="container">
       <form>
@@ -223,7 +206,7 @@
                "make": make,
                "model": model,
                "year": $("#year").val(),
-               "email":email,
+               "email":document.getElementById("email").innerHTML,
             },
             success:function(data, status)
             {
