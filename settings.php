@@ -201,7 +201,7 @@
             {
               console.log(data);
               if(data){
-                window.location = "../Get-Me-There/index.html";
+                window.location = "index.php";
                 console.log("Account deleted.");
               }
               else{
@@ -216,7 +216,7 @@
           $.ajax
           ({
             type:"POST",
-            url: "car.php",
+            url: "api/car.php",
             dataType:"json",
             data:
             {
