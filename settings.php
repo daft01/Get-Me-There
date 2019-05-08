@@ -216,7 +216,7 @@
           $.ajax
           ({
             type:"POST",
-            url: "api/car.php",
+            url: "car.php",
             dataType:"json",
             data:
             {
