@@ -15,7 +15,8 @@ body {
   font-size: 1.5rem;
 }
 
-.card-signin .card-body {
+.card-signin .card-body, #google{
+  
   padding: 2rem;
 }
 
@@ -39,7 +40,7 @@ body {
 
 
 .form-label-group>input,
-.form-label-group>label {
+.form-label-group>label{
   padding: var(--input-padding-y) var(--input-padding-x);
 }
 

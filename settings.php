@@ -9,107 +9,11 @@
   <link rel="stylesheet" href="css/setting.css">
   <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
   
-  <style>
-  .navbar {
-        overflow: hidden;
-        background-color: #333;
-      }
-      
-      .navbar a {
-        float: right;
-        font-size: 1.5em;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-      }
-      
-      .dropdown {
-        float: right;
-        overflow: hidden;
-        font-size: 1em;
-        margin-right: 100px;
-        width: 150px;
-      }
-      
-      .dropdown .dropbtn {
-        font-size: 16px;  
-        border: none;
-        outline: none;
-        color: white;
-        padding: 14px 16px;
-        background-color: inherit;
-        font-family: inherit;
-        font-size: 1.5em;
-        margin: 0;
-      }
-      
-      .navbar a:hover, .dropdown:hover .dropbtn {
-        background-color: red;
-      }
-      
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-      }
-      
-      .dropdown-content a {
-        float: none;
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        text-align: left;
-        
-      }
-      
-      .dropdown-content a:hover {
-        background-color: purple;
-      }
-      
-      .dropdown:hover .dropdown-content {
-        display: block;
-      }
-  </style>
 </head>
 
 <body id="dummybodyid">
   
-  <div class="navbar">
-    <div class="dropdown">
-      <button class="dropbtn">Account
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="#">Settings</a>
-        <a href="#">Sign Out</a>
-        <a href="#">Delete Account</a>
-      </div>
-    </div> 
-    <a href="map.php">Map</a>
-    <a href="index.php">Home</a>
-  </div>
-  <ul class="nav">
-      <li class="nav-item">
-        <a class="nav-link" style="font-family: 'Source Serif Pro', serif; font-size:1.6em;" href="index.php">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" style="font-family: 'Source Serif Pro', serif; font-size:1.6em;" href="map.php">Map</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active"  style="font-family: 'Source Serif Pro', serif; font-size:1.6em;"href="settings.php" id="blue">Settings</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link"  style="font-family: 'Source Serif Pro', serif; font-size:1.6em;"href="signIn.php">Sign In</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" style="font-family: 'Source Serif Pro', serif; font-size:1.6em;"href="signUp.html">Sign Up</a>
-      </li>
-  </ul>
+
     <div id="container">
       <form>
         <fieldset>
@@ -137,8 +41,8 @@
             <h4 id= "highwayMpg">Highway MPG: </h1>
           </div>
           
-          <button type = button id = "button" class="btn btn-outline-success">Add Car</button>
-          <button type = button id="deleteButton" class="btn btn-outline-danger"> Delete Account</button>
+          <button type = button id = "button" class="btn btn-outline-success">Update Car</button>
+          <button type = button id="deleteButton" class="btn btn-outline-danger"> Back</button>
           <div id="container"> </div>
             
         </fieldset>
