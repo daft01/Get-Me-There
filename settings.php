@@ -131,12 +131,12 @@
                 {
                   $("#model").append('<option>' + data["Results"][i]["Model_Name"] + '</option>');
                 }
-                    
+                $('select').selectpicker('refresh'); 
                 for(var i = 1; i < 30; i++)
                 {
                   $("#year").append('<option>' + (1990 + i) + '</option>');
                 }
-                $('.selectpicker').selectpicker('refresh');
+                $('select').selectpicker('refresh');
                 
             } ,
           complete: function(status, err){
