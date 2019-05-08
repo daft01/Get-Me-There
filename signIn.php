@@ -1,5 +1,3 @@
-  
-
 
 <!--Lv62Qu98hIIPzgrRAqg4EG6P--> 
 <!--new secret-->
@@ -25,29 +23,59 @@ session_start();
 
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/styles.css">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/signin.css">
 
   </head>
   <body>
     
     
 
-    <h1>Sign In Page</h1>
-  <label>Email: </label>  <input id="username" type="text"></input>
-  <br />
-  <br />
+<!--    <h1>Sign In Page</h1>-->
+<!--  <label>Email: </label>  <input id="username" type="text"></input>-->
+<!--  <br />-->
+<!--  <br />-->
 
-  <label>Password: </label>  <input id="pswd" type="password"></input>
-  <br />
-  <br />
-  <div id="result"></div>
-<button id="normalS" onclick= "normalSignin()">Sign In</button>
-<div class="g-signin2" data-onsuccess="onSignIn"></div>
-<div class="fb-login-button" data-width="" data-size="medium" data-button-type="login_with" data-auto-logout-link="true" data-use-continue-as="false"></div>
-    <a href="#" onclick="signOut();">Sign out</a>
+<!--  <label>Password: </label>  <input id="pswd" type="password"></input>-->
+<!--  <br />-->
+<!--  <br />-->
+<!--  <div id="result"></div>-->
+<!--<button id="normalS" onclick= "normalSignin()">Sign In</button>-->
+<!--<div class="g-signin2" data-onsuccess="onSignIn"></div>-->
+<!--<div class="fb-login-button" data-width="" data-size="medium" data-button-type="login_with" data-auto-logout-link="true" data-use-continue-as="false"></div>-->
+<!--    <a href="#" onclick="signOut();">Sign out</a>-->
 
 
+    <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">  
 
+            <h1>Sign In Page</h1>
+          <form class="form-signin">
+            <div class="form-label-group">
+              <label>Email: </label><input id="username" type="text" class="form-control"></input>
+            </div>
+            <div class="form-label-group">
+              <label>Password: </label><input id="pswd" type="password" class="form-control"></input>
+            </div>
+              <div id="result"></div>
+              <button id="normalS" onclick= "normalSignin()" class="btn btn-lg btn-primary btn-block text-uppercase">Sign In</button>
+              <div id="google"class="g-signin2" data-onsuccess="onSignIn" ></div>
+              <div class="fb-login-button" data-width="" data-size="medium" data-button-type="login_with" data-auto-logout-link="true" data-use-continue-as="false"></div>
+              <a href="#" onclick="signOut();">Sign out</a>
+          </form>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script>
     var email;
     
