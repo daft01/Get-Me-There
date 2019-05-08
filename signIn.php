@@ -86,6 +86,7 @@ session_start();
         }
       
     });
+    }
 
     function onSignIn(googleUser) {
       
