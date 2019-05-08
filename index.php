@@ -176,6 +176,10 @@
         justify-content: center;
 
       }
+      .logoImg{
+        padding-left: 20px;
+
+      }
         </style>
         
         <meta charset="utf-8">
@@ -191,11 +195,18 @@
     <body>
       
          <div class="navbar">
+           
+                         
+
+           
+          
+
       <div id="login">
          <div class='dropdown'><button class='dropbtn'>Account<i class='fa fa-caret-down'></i></button><div class='dropdown-content'><a href='settings.php'>Settings</a><a href='signOut.php'>Sign Out</a><a href='delete.php'>Delete Account</a></div></div>
       </div>
       <a href="map.php">Map</a>
       <a href="index.php">Home</a>
+      <img class="logoImg" src="images/logoWhite.png" style="width:200px; height:95px;"> 
     </div>
     
 
