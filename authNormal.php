@@ -1,8 +1,7 @@
 <?php
     session_start();
-
-    include "connect.php";
     
+    include "connect.php";
     $db = getDBConnection();
     
     // $query = "INSERT into user_data (email, password, first_name, last_name)
@@ -13,8 +12,8 @@
     return $stmt->fetchColumn();
    }
 
-    function matchingPassword($pdo, $pwd,$email){
-        $stmt = $pdo->prepare("SELECT password from users WHERE email=?");
+    function matchingPassword($pdo, $pwd){
+        $stmt = $pdo->prepare("SELECT email from users WHERE password=?");
         $stmt->execute([$pwd]); 
         return $stmt->fetchColumn();
 
@@ -27,16 +26,23 @@
     $passw= $_POST["password"];
 
     if (emailExists($db,$email)) {
-        if(matchingPassword($db,$passw, $email)){
-            echo "logged in";
+        if(matchingPassword($db,$passw)){
+        echo json_encode(array("successfulLogin" => true)); 
+
+
+        //     ob_start();
+        //   header("Location: https://get-me-there.herokuapp.com/",  true,  301 );  
+        // //   ob_end();
+        //   exit();
+
         }
         else{
-            echo "wrong password";
+            echo json_encode(array("wrongPass" => true)); 
         }
 
     }  
     else{
-        echo "this account does not exist";
+            echo json_encode(array("noEmail" => true)); 
     //      $query = "INSERT into user (email, password)
     // values('".$_POST["email"]."','".$_POST["pass"]."','".$_POST["firstname"]."','".$_POST["lastname"]."')"; 
     //  $statement = $db->prepare($query);
@@ -46,13 +52,10 @@
     // echo json_encode($records);
       
     }
+
+
     $_SESSION["email"] = $_POST["email"];
     $_SESSION["password"]=$_POST["pass"];
     $_SESSION["firstname"]=$_POST["firstname"];
     $_SESSION["lastname"]=$_POST["lastname"];
-
-    // print_r($_POST);
-    
-   
-    
 ?>

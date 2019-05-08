@@ -2,20 +2,11 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="img/favicon.png">
 
     <title> Get-Me-There Login</title>
-
-    
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
-    <!--<link href="css/font-awesome.min.css" rel="stylesheet">-->
-    <!--<link href="css/simple-line-icons.css" rel="stylesheet">-->
-    
-    <!--<link href="css/style.min.css" rel="stylesheet">-->
 
     <style>
         html,
@@ -34,10 +25,11 @@
 <body>
     <main class="d-flex align-items-center justify-content-center">
         <div class="card">
+            
             <div class="card-body p-4">
                 <h1>Signup</h1>
                 <p class="text-muted">Sign up for an account</p>
-                
+    
                 <form>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
@@ -45,67 +37,57 @@
                         </div>
                         <input type="text" class="form-control" placeholder="Email" name="email">
                     </div>
+                    
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="icon-lock"></i></span>
                         </div>
                         <input type="password" class="form-control" placeholder="Password" name="password">
                     </div>
+                    
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="icon-lock"></i></span>
                         </div>
                         <input type="password" class="form-control" placeholder="Confirm Password" name="confirmation">
                     </div>
+                    
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text"></span>
                         </div>
                         <input type="text" class="form-control" placeholder="First Name" name="first_name">
                     </div>
+                    
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text"></span>
                         </div>
                         <input type="text" class="form-control" placeholder="Last Name" name="last_name">
                     </div>
+                    
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text"></span>
                         </div>
                         <input type="text" class="form-control" placeholder="Phone Number" name="phone_number">
                     </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"></span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="City Mileage" name="city_mileage">
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"></span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Freeway Mileage" name="freeway_mileage">
-                    </div>
                     
                     <div>
+                        
                         <label>Make: </label>
                         <select id="make">
                               
                         </select>
                         <br>
                         <label>Model: </label>
-                        <select id="model">
-                            
-                              
-                        </select>
+                        <select id="model"></select>
                           
                         <br>
                           
                         <label>Year: </label>
-                        <select id ="year">
-                            
-                        </select>
+                        <select id ="year"></select>
+                        
                         <br>
                           
                         <div>
@@ -116,16 +98,19 @@
                     </div>
                     
                     <button id="signupButton" type="button" class="btn btn-block btn-success">Create Account</button>
+                    
                     <div>
                         <a class="text-secondary" href="login.html">Login to an account</a>
                     </div>
-
+                    
                 </form>
             </div>
+            
             <div class="card-footer p-4">
                 <div id="message" class="alert alert-danger open-hidden" role="alert">
                 </div>
             </div>
+            
         </div>
     </main>
 

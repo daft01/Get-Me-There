@@ -7,7 +7,7 @@ function getDBConnection(){
     
      //checking whether the URL contains "herokuapp" (using Heroku)
      
-    echo $_SERVER['HTTP_HOST'];
+    // echo $_SERVER['HTTP_HOST'];
 
 if(strpos($_SERVER['HTTP_HOST'], 'herokuapp') !== false) {
     $url = parse_url(getenv("CLEARDB_DATABASE_URL"));

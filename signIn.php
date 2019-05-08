@@ -39,6 +39,7 @@ session_start();
   <label>Password: </label>  <input id="pswd" type="password"></input>
   <br />
   <br />
+  <div id="result"></div>
 <button id="normalS" onclick= "normalSignin()">Sign In</button>
 <div class="g-signin2" data-onsuccess="onSignIn"></div>
 <div class="fb-login-button" data-width="" data-size="medium" data-button-type="login_with" data-auto-logout-link="true" data-use-continue-as="false"></div>
@@ -48,6 +49,7 @@ session_start();
 
     <script>
     var email;
+    
     function normalSignin() {
       var email= $("#username").val();
       var pass= $("#pswd").val();
@@ -56,14 +58,36 @@ session_start();
           type: "POST",
           url: "authNormal.php",
           data: { "email": email,"password":pass },
-          success: function(){},
-          dataType: "json"
+          dataType: "json",
           
-    });
+     success: function(data, status) {
+            if(data.successfulLogin){
+                window.location = "index.php";
 
+            }
+            if(data.wrongPass){
+              $("#result").html("Wrong Password");
+            }
+            if(data.noEmail){
+              $("#result").html("No account found with associated email");
 
+            }
+            // if (data.isSignedUp) {
+            //     window.location = "../Get-Me-There/index.php";
+            //     $("#message").html("Account successful");
+            // }
+            // else {
+            //     $("#message").html("Error: " + data.message);
+            //     $("#message").removeClass("open-hidden");
+            // }
+            // console.log(data.isSignedUp);
+            // console.log("helllooooo");
+            // return alert("it doesnt work");
+        }
       
+    });
     }
+
     function onSignIn(googleUser) {
       
     var profile = googleUser.getBasicProfile();
