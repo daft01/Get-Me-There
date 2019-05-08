@@ -80,13 +80,13 @@ session_start();
     console.log(fN);
     console.log(lN);
     var id_token = googleUser.getAuthResponse().id_token;
-        $.post('/server/sign-in', {id_token: id_token})
-        .then(function(user) {
-            // The user is now signed in on the server too
-            // and the user should now have a session cookie
-            // for the whole site. 
-            document.location.href = 'https://get-me-there.herokuapp.com'
-        })
+        // $.post('/server/sign-in', {id_token: id_token})
+        // .then(function(user) {
+        //     // The user is now signed in on the server too
+        //     // and the user should now have a session cookie
+        //     // for the whole site. 
+        //     document.location.href = 'https://get-me-there.herokuapp.com'
+        // })
         
     $.ajax({
           type: "POST",

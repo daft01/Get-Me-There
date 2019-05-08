@@ -23,7 +23,7 @@
         echo "found";
     }  
     else{
-         $query = "INSERT into user (email, password, first_name, last_name)
+         $query = "INSERT into users (email, password, first_name, last_name)
     values('".$_POST["email"]."','".$_POST["pass"]."','".$_POST["firstname"]."','".$_POST["lastname"]."')"; 
      $statement = $db->prepare($query);
     $statement->execute();

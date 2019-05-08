@@ -1,7 +1,7 @@
 <?php
 function getDBConnection(){
     $host = "localhost";
-     $user = "root";
+     $user = "irismanriquezc";
      $pass = "";
      $db = "get_me_there"; 
     
