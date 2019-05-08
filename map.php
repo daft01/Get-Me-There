@@ -1,9 +1,14 @@
 <?php
+
+  session_start();
   if(!isset($_SESSION))
   {
-    session_start();
     $email = ($_SESSION['email']);
   }
+  
+    //   if (!isset($_SESSION['email'])){
+    //   header("Location: login.html");
+    // }
 ?>
 
 <!DOCTYPE html>
