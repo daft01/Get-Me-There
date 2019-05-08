@@ -189,7 +189,7 @@
         
         $("#deleteButton").on("click", function()
         {
-          window.location = "../Get-Me-There/index.php"
+          window.location = "/map.php"
         });
         var email = "<?php echo $email?>";
         $("#button").on("click", function()
