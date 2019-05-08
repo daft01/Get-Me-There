@@ -1,8 +1,8 @@
 <?php
 
-    include 'connect.php';
+    include 'dbConnection.php';
     
-    $conn = getDBConnection()();
+    $conn = getDatabaseConnection();
     
     $sql = "INSERT INTO `cars`(`email`, `model`, `year`, `highway`, `city`, `made`) VALUES ('hello123@gmail.com', '". $_POST['model'] . "', " . $_POST['year'] . ", " . $_POST['highway'] . ", " . $_POST['city'] . " , '" . $_POST['make'] . "')";
     $stmt = $conn->prepare($sql);
