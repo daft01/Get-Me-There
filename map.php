@@ -1,6 +1,9 @@
 <?php
-  session_start();
-  $email = $_SESSION['email'];
+  if(!isset($_SESSION))
+  {
+    session_start();
+    $email = ($_SESSION['email']);
+  }
 ?>
 
 <!DOCTYPE html>

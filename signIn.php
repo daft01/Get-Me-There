@@ -1,5 +1,4 @@
 
-
 <!--Lv62Qu98hIIPzgrRAqg4EG6P--> 
 <!--new secret-->
 <?php
@@ -32,46 +31,46 @@ session_start();
     
     
 
-    <h1>Sign In Page</h1>
-  <label>Email: </label>  <input id="username" type="text"></input>
-  <br />
-  <br />
+<!--    <h1>Sign In Page</h1>-->
+<!--  <label>Email: </label>  <input id="username" type="text"></input>-->
+<!--  <br />-->
+<!--  <br />-->
 
-  <label>Password: </label>  <input id="pswd" type="password"></input>
-  <br />
-  <br />
-  <div id="result"></div>
-<button id="normalS" onclick= "normalSignin()">Sign In</button>
-<div class="g-signin2" data-onsuccess="onSignIn"></div>
-<div class="fb-login-button" data-width="" data-size="medium" data-button-type="login_with" data-auto-logout-link="true" data-use-continue-as="false"></div>
-    <a href="#" onclick="signOut();">Sign out</a>
+<!--  <label>Password: </label>  <input id="pswd" type="password"></input>-->
+<!--  <br />-->
+<!--  <br />-->
+<!--  <div id="result"></div>-->
+<!--<button id="normalS" onclick= "normalSignin()">Sign In</button>-->
+<!--<div class="g-signin2" data-onsuccess="onSignIn"></div>-->
+<!--<div class="fb-login-button" data-width="" data-size="medium" data-button-type="login_with" data-auto-logout-link="true" data-use-continue-as="false"></div>-->
+<!--    <a href="#" onclick="signOut();">Sign out</a>-->
 
 
-  <!--  <div class="container">-->
-  <!--  <div class="row">-->
-  <!--    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">-->
-  <!--      <div class="card card-signin my-5">-->
-  <!--        <div class="card-body">  -->
+    <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">  
 
-  <!--          <h1>Sign In Page</h1>-->
-  <!--        <form class="form-signin">-->
-  <!--          <div class="form-label-group">-->
-  <!--            <label>Email: </label><input id="username" type="text" class="form-control"></input>-->
-  <!--          </div>-->
-  <!--          <div class="form-label-group">-->
-  <!--            <label>Password: </label><input id="pswd" type="password" class="form-control"></input>-->
-  <!--          </div>-->
-  <!--            <div id="result"></div>-->
-  <!--            <button id="normalS" onclick= "normalSignin()" class="btn btn-lg btn-primary btn-block text-uppercase">Sign In</button>-->
-  <!--            <div id="google" class="g-signin2" data-onsuccess="onSignIn" ></div>-->
-  <!--            <div class="fb-login-button" data-width="" data-size="medium" data-button-type="login_with" data-auto-logout-link="true" data-use-continue-as="false"></div>-->
-  <!--            <a href="#" onclick="signOut();">Sign out</a>-->
-  <!--        </form>-->
-  <!--      </div>-->
-  <!--    </div>-->
-  <!--  </div>-->
-  <!--  </div>-->
-  <!--</div>-->
+            <h1>Sign In Page</h1>
+          <form class="form-signin">
+            <div class="form-label-group">
+              <label>Email: </label><input id="username" type="text" class="form-control"></input>
+            </div>
+            <div class="form-label-group">
+              <label>Password: </label><input id="pswd" type="password" class="form-control"></input>
+            </div>
+              <div id="result"></div>
+              <button id="normalS" onclick= "normalSignin()" class="btn btn-lg btn-primary btn-block text-uppercase">Sign In</button>
+              <div id="google"class="g-signin2" data-onsuccess="onSignIn" ></div>
+              <div class="fb-login-button" data-width="" data-size="medium" data-button-type="login_with" data-auto-logout-link="true" data-use-continue-as="false"></div>
+              <a href="#" onclick="signOut();">Sign out</a>
+          </form>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
 
 
   
@@ -93,14 +92,12 @@ session_start();
      success: function(data, status) {
             if(data.successfulLogin){
                 window.location = "index.php";
-
             }
             if(data.wrongPass){
               $("#result").html("Wrong Password");
             }
             if(data.noEmail){
               $("#result").html("No account found with associated email");
-
             }
             // if (data.isSignedUp) {
             //     window.location = "../Get-Me-There/index.php";
@@ -117,7 +114,6 @@ session_start();
       
     });
     }
-
     function onSignIn(googleUser) {
       
     var profile = googleUser.getBasicProfile();
@@ -151,7 +147,6 @@ session_start();
            success: function(data, status) {
             if(data.successfulLogin){
                 window.location = "index.php";
-
             }
            
             // if (data.isSignedUp) {
@@ -172,7 +167,6 @@ session_start();
         
   }
  
-
     function signOut() {
       var auth2 = gapi.auth2.getAuthInstance();
       auth2.signOut().then(function () {
