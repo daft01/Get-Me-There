@@ -22,7 +22,7 @@
         <a class="nav-link" style="font-family: 'Source Serif Pro', serif; font-size:1.6em;" href="index.php">Map</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active"  style="font-family: 'Source Serif Pro', serif; font-size:1.6em;"href="sittings.php" id="blue">Settings</a>
+        <a class="nav-link active"  style="font-family: 'Source Serif Pro', serif; font-size:1.6em;"href="settings.php" id="blue">Settings</a>
       </li>
       <li class="nav-item">
         <a class="nav-link"  style="font-family: 'Source Serif Pro', serif; font-size:1.6em;"href="signIn.php">Sign In</a>
@@ -131,12 +131,12 @@
                 {
                   $("#model").append('<option>' + data["Results"][i]["Model_Name"] + '</option>');
                 }
-                    
+                $('select').selectpicker('refresh'); 
                 for(var i = 1; i < 30; i++)
                 {
                   $("#year").append('<option>' + (1990 + i) + '</option>');
                 }
-                $('.selectpicker').selectpicker('refresh');
+                $('select').selectpicker('refresh');
                 
             } ,
           complete: function(status, err){
@@ -201,7 +201,7 @@
             {
               console.log(data);
               if(data){
-                window.location = "../Get-Me-There/index.html";
+                window.location = "index.php";
                 console.log("Account deleted.");
               }
               else{

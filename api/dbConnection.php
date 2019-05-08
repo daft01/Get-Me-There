@@ -1,11 +1,11 @@
 <?php
 
-function getDatabaseConnection($db = 'heroku_42b1ec32cf47072'){
+function getDatabaseConnection($db = 'get_me_there'){
     
     $host = "localhost";
      $user = "root";
      $pass = "";
-     $db = "heroku_42b1ec32cf47072"; 
+     $db = "get_me_there"; 
     
      //checking whether the URL contains "herokuapp" (using Heroku)
     if(strpos($_SERVER['HTTP_HOST'], 'herokuapp') !== false) {
