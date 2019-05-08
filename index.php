@@ -18,7 +18,7 @@
     <style>
       
       #container{
-        width: 1500px;
+        width: 1400px;
         margin: 0 auto;
       }
       #mapContainer{
@@ -29,13 +29,13 @@
         background-color: black;
           font-size: 1.5em;
         color: white;
-        margin-left: 10px;
+        margin-left: 1%;
           height: 1000px;
       }
       #tripTitle{
         width: 100%;
         text-align: center;
-        font-size: 3em;
+        font-size: 2.5em;
       }
       #locations{
         font-size: 2.5em;
@@ -51,7 +51,7 @@
       }
       #addTrip{
         width: 200px;
-        height: 50px;
+        height: 39px;
         font-size: .5em;
         border-radius: 5px;
           background-color: purple;
@@ -97,37 +97,49 @@
         {
            border-bottom:2px blue solid;
         }
+        span
+        {
+          font-size: 0.6em;
+        }
     </style>
   </head>
   <body>
-    <ul class="nav">
-      <li class="nav-item">
-        <a class="nav-link" style="font-family: 'Source Serif Pro', serif; font-size:1.6em;" href="home.php">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" style="font-family: 'Source Serif Pro', serif; font-size:1.6em;" href="index.php" id="blue">Map</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link"  style="font-family: 'Source Serif Pro', serif; font-size:1.6em;"href="sittings.php" >Settings</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link"  style="font-family: 'Source Serif Pro', serif; font-size:1.6em;"href="signIn.php">Sign In</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" style="font-family: 'Source Serif Pro', serif; font-size:1.6em;"href="signUp.html">Sign Up</a>
-      </li>
-  </ul>
-    <div id="container">
-      <div id="locations">
-        <label for="origin">Origin: </label>
-        <input class="form-control" id="origin" type="text" placeholder="Current Location">
+    <div>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" style="font-family: 'Source Serif Pro', serif; font-size:1.6em;" href="home.php">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" style="font-family: 'Source Serif Pro', serif; font-size:1.6em;" href="index.php" id="blue">Map</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  style="font-family: 'Source Serif Pro', serif; font-size:1.6em;"href="sittings.php" >Settings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  style="font-family: 'Source Serif Pro', serif; font-size:1.6em;"href="signIn.php">Sign In</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="font-family: 'Source Serif Pro', serif; font-size:1.6em;"href="signUp.html">Sign Up</a>
+          </li>
+        </ul>
+    </div>
+    <br><br>
   
-        <label for="destination">Destination: </label>
-        <input class="form-control" id="destination" type="text" placeholder="Search">
+    <div id="container">
+      <div>
+        <div id="locations" class="form-row">
+          <span for="origin">Origin: </span> 
+          <div class="col-4">
+            <input class="form-control mx-sm-0" id="origin" type="text" placeholder="Current Location">
+          </div>
+          <span for="destination">Destination: </span>
+          <div class="col-4">
+          <input class="form-control mx-sm-0" id="destination" type="text" placeholder="Search">
+          </div>
           
-        <button id="addTrip" onclick="addTripClicked()">Add to trips</button>
+          <button class="form-control" id="addTrip" onclick="addTripClicked()">Add to trips</button>
+        </div>
       </div>
-      
       <div id="mapContainer">
         <div>
           <div id="map"></div>
