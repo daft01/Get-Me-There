@@ -251,3 +251,171 @@ Stack trace:
 #1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/addTrip.php(4): getDatabaseConnection('get_me_there')
 #2 {main}
   thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:10:04 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:10:12 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:10:20 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:10:28 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:10:36 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:11:31 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:12:19 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:12:31 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:13:04 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:13:27 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:13:43 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:39:16 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:40:26 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:43:18 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:43:29 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:46:08 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:47:12 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:50:11 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:50:48 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:51:38 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:53:03 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:53:13 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:53:22 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:53:36 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:54:06 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:54:12 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:55:13 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27
+[08-May-2019 00:55:24 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'get_me_there'' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php(27): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php(4): getDatabaseConnection('get_me_there')
+#2 {main}
+  thrown in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 27

@@ -26,11 +26,12 @@
       }
       #trips{
         width: 100%;
-        background-color: black;
-          font-size: 1.5em;
-        color: white;
-        margin-left: 1%;
-          height: 1000px;
+         border-style: solid;
+          border-width: 1px;
+          font-size: 1em;
+        color: black;
+        margin-left: 10%;
+          height: 700px;
       }
       #tripTitle{
         width: 100%;
@@ -42,7 +43,7 @@
         margin-bottom: 20px;
       }
       input{
-        font-size: .7em;
+        font-size: 1em;
         width: 300px;
       }
       #optionsContainer{
@@ -101,6 +102,10 @@
         {
           font-size: 0.6em;
         }
+        #map
+        {
+           width:800px;
+        }
     </style>
   </head>
   <body>
@@ -130,11 +135,11 @@
         <div id="locations" class="form-row">
           <span for="origin">Origin: </span> 
           <div class="col-4">
-            <input class="form-control mx-sm-0" id="origin" type="text" placeholder="Current Location">
+            <input class="form-control" id="origin" type="text" placeholder="Current Location">
           </div>
           <span for="destination">Destination: </span>
           <div class="col-4">
-          <input class="form-control mx-sm-0" id="destination" type="text" placeholder="Search">
+          <input class="form-control" id="destination" type="text" placeholder="Search">
           </div>
           
           <button class="form-control" id="addTrip" onclick="addTripClicked()">Add to trips</button>
@@ -154,7 +159,7 @@
         
         
         <div id="trips">
-          <div id="tripTitle">Trips</div>
+          <div id="tripTitle" style="text-decoration: underline;">Trips</div>
             
         </div>
       </div>
