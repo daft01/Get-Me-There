@@ -123,7 +123,7 @@
                 window.location = "map.php";
             }
             
-            function deleteAccoun(){
+            function deleteAccount(){
                 
               $.ajax({
                     type:"POST",
