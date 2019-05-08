@@ -76,7 +76,9 @@
         /*position:relative;*/
       }
       .slogan {
-        color:#0000ff;
+        color:black;
+          text-shadow: 3px 4px #f2eb1f;
+
         font-size:5em;
         font-weight:bold;
       font-family: 'Playfair Display SC', serif;
@@ -105,6 +107,17 @@
         width: 100%;
         height: 350px;
         background-color: #edb982;
+      }
+    /*  .top{*/
+    /*  background: url("images/taxis.jpg");*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*background-attachment: fixed;*/
+    /*background-position: center; */
+
+    /*  }*/
+      .taxiImage{
+        object-fit:fill;
       }
       .missTop, .miss{
         font-family: 'Nanum Gothic', sans-serif;
@@ -142,6 +155,27 @@
 
         
       }
+      .showButton{
+        
+        background-color: #efbb1f; 
+        border: none;
+        color: white;
+        padding: 32px 35px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+          justify-content: center;
+          
+
+      }
+      .showMe{
+        
+        text-align: center;
+
+        justify-content: center;
+
+      }
         </style>
         
         <meta charset="utf-8">
@@ -150,23 +184,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
 <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
     </head>
     <body>
       
-        <div class="navbar">
-      <div class="dropdown">
-        <button class="dropbtn">Account
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="#">Settings</a>
-          <a href="#">Sign Out</a>
-          <a href="#">Delete Account</a>
-        </div>
-      </div> 
+         <div class="navbar">
+      <div id="login">
+         <div class='dropdown'><button class='dropbtn'>Account<i class='fa fa-caret-down'></i></button><div class='dropdown-content'><a href='settings.php'>Settings</a><a href='signOut.php'>Sign Out</a><a href='delete.php'>Delete Account</a></div></div>
+      </div>
       <a href="map.php">Map</a>
       <a href="index.php">Home</a>
     </div>
@@ -185,7 +212,7 @@
   
     <div class ="slogan" style="width:70%;">A better way for transportation</div>
 	  </div>
-	  
+	  <br><br><br>
   <div class="underM">
     <div class="weAre" style="width:100%; height:100%">
       <div class="missTop">Our Mission: </div>
@@ -224,7 +251,11 @@
     
   </div>
     
-    
+    <div class="showMe">
+      <!--<button type="button" class="btn btn-outline-primary" onclick="location.href = 'signUp.html';">Primary</button>-->
+
+      <button class="showButton" Onclick="location.href = 'signUp.html';">SHOW ME</button>
+    </div>
 </div>
 
 
