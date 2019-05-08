@@ -2,7 +2,7 @@
 
 
 
-if(document.getElementById(email) ==""){
+if($_SESSION['email']){
     document.getElementById(email).innerHTML = "Sign up";
 }
 else{
