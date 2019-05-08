@@ -15,6 +15,7 @@
         $sql = "DELETE FROM `user` WHERE email = '" . $_SESSION['email'] ."'";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
+        session_destroy();
         echo json_encode(array("message" => true));
     }
     else{

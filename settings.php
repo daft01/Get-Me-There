@@ -16,10 +16,10 @@
 <body id="dummybodyid">
   <ul class="nav">
       <li class="nav-item">
-        <a class="nav-link" style="font-family: 'Source Serif Pro', serif; font-size:1.6em;" href="home.php">Home</a>
+        <a class="nav-link" style="font-family: 'Source Serif Pro', serif; font-size:1.6em;" href="index.php">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" style="font-family: 'Source Serif Pro', serif; font-size:1.6em;" href="index.php">Map</a>
+        <a class="nav-link" style="font-family: 'Source Serif Pro', serif; font-size:1.6em;" href="map.php">Map</a>
       </li>
       <li class="nav-item">
         <a class="nav-link active"  style="font-family: 'Source Serif Pro', serif; font-size:1.6em;"href="settings.php" id="blue">Settings</a>

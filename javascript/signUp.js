@@ -19,7 +19,7 @@ $.ajax
         
     } ,
   complete: function(status, err){
-     console.log(status);
+    //  console.log(status);
   } 
   });
 });
