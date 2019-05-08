@@ -195,14 +195,15 @@
     </div>
 
     <div id="container">
-      <div id="locations">
-         <label for="origin">Origin: </label>
+       <div id="locations">
+        <label for="origin">Origin: </label>
         <input class="form-control" id="origin" type="text" placeholder="Current Location">
-  
+
         <label for="destination">Destination: </label>
         <input class="form-control" id="destination" type="text" placeholder="Search">
-          
-        <button onclick="addTripClicked()">Add to trips</button>
+
+        <button id="addTrip" onclick="addTripClicked()">Add to trips</button>
+      </div>
       
       <div id="mapContainer">
         <div>
