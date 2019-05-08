@@ -1,15 +1,19 @@
 <?php
 function getDBConnection(){
     $host = "localhost";
-     $user = "irismanriquezc";
+     $user = "root";
      $pass = "";
      $db = "get_me_there"; 
     
      //checking whether the URL contains "herokuapp" (using Heroku)
+     
+    echo $_SERVER['HTTP_HOST'];
+
 if(strpos($_SERVER['HTTP_HOST'], 'herokuapp') !== false) {
     $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
     $host = $url["host"];
-    $db = substr($url["path"], 1);
+
+    $db = "heroku_42b1ec32cf47072";
     $user = $url["user"];
     $pass = $url["pass"];
 }
