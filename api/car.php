@@ -17,7 +17,7 @@
     else
     {
         
-        $sql = "UPDATE `cars` SET `email`='hello123@gmail.com',`model`='". $_POST['model']. "', `year`=". $_POST['year'] . " ,`highway`=" . $_POST['highway'] . ",`city`=" . $_POST['city'] . ",`made`='" . $_POST['make'] ."' WHERE 1";
+        $sql = "UPDATE `cars` SET `email`='" . $_POST['email'] . "',`model`='". $_POST['model']. "', `year`=". $_POST['year'] . " ,`highway`=" . $_POST['highway'] . ",`city`=" . $_POST['city'] . ",`made`='" . $_POST['make'] ."' WHERE 1";
         echo $sql;
     }
     $stmt = $conn->prepare($sql);
