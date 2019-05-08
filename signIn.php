@@ -64,7 +64,7 @@ session_start();
               <button id="normalS" onclick= "normalSignin()" class="btn btn-lg btn-primary btn-block text-uppercase">Sign In</button>
               <div id="google"class="g-signin2" data-onsuccess="onSignIn" ></div>
               <div class="fb-login-button" data-width="" data-size="medium" data-button-type="login_with" data-auto-logout-link="true" data-use-continue-as="false"></div>
-              <a href="#" onclick="signOut();">Sign out</a>
+              <a href="#" onclick="signUp();">Sign up</a>
           </form>
         </div>
       </div>
@@ -167,11 +167,9 @@ session_start();
         
   }
  
-    function signOut() {
-      var auth2 = gapi.auth2.getAuthInstance();
-      auth2.signOut().then(function () {
-        console.log('User signed out.');
-      });
+    function signUp() {
+    
+      window.location = "signUp.html"
     }
     
     </script>
