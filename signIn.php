@@ -91,7 +91,7 @@ session_start();
           
      success: function(data, status) {
             if(data.successfulLogin){
-                window.location = "index.php";
+                window.location = "map.php";
             }
             if(data.wrongPass){
               $("#result").html("Wrong Password");
@@ -146,7 +146,7 @@ session_start();
           dataType: "json",
            success: function(data, status) {
             if(data.successfulLogin){
-                window.location = "index.php";
+                window.location = "map.php";
             }
            
             // if (data.isSignedUp) {
