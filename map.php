@@ -15,6 +15,10 @@
   <head>
     <title>Get Me There</title>
     <meta name="viewport" content="initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+
+
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/styles.css">
     <style>
@@ -97,9 +101,12 @@
       }
       #trips{
         width: 100%;
-        background-color: black;
-          font-size: 1.5em;
-        color: white;
+        border-style: dashed;
+        border-color:#b223bc;
+        font-family: 'Abril Fatface', cursive;
+        background-color: #fce0ff;
+          font-size: .5em;
+        color: black;
         margin-left: 10px;
           height: 1000px;
       }
@@ -132,11 +139,11 @@
         margin: 5px;
       }
         .yellow{
-            color: yellow;
+            color: #EAB01C;
         }
         
         .trip{
-            border-bottom: 5px solid yellow;
+            border-bottom: 5px solid #eab01c;
         }
         .tripLocation{
             padding: 10px;
@@ -159,6 +166,11 @@
         #TRANSIT{
             flex-basis: 25%;
             flex-grow: 0;
+        }
+        #des,#origin,#addTrip{
+          font-family: 'Open Sans Condensed', sans-serif;
+
+          
         }
     </style>
   </head>
@@ -184,14 +196,13 @@
 
     <div id="container">
       <div id="locations">
-        <label for="origin">Origin: </label>
+         <label id ="origin" for="origin">Origin: </label>
         <input class="form-control" id="origin" type="text" placeholder="Current Location">
   
-        <label for="destination">Destination: </label>
+        <label id ="des" for="destination">Destination: </label>
         <input class="form-control" id="destination" type="text" placeholder="Search">
           
-        <button id="addTrip" onclick="addTripClicked()">Add to trips</button>
-      </div>
+        <button id ="addTrip"id="addTrip" onclick="addTripClicked()">Add to trips</button>
       
       <div id="mapContainer">
         <div>
