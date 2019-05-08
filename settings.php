@@ -190,7 +190,11 @@
         
         $("#deleteButton").on("click", function()
         {
+<<<<<<< HEAD
           window.location = "../Get-Me-There/map.php"
+=======
+          window.location = "/map.php"
+>>>>>>> f23a7577e604ccef13e3df288e94b9a526091965
         });
         var email = "<?php echo $email?>";
         $("#button").on("click", function()
