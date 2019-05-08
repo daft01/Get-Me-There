@@ -171,26 +171,7 @@
         
         $("#deleteButton").on("click", function()
         {
-          $.ajax
-          ({
-            type:"POST",
-            url:"api/deleteAccount.php",
-            dataType: "text",
-            data: 
-            {
-            },
-            success: function(data)
-            {
-              console.log(data);
-              if(data){
-                window.location = "index.php";
-                console.log("Account deleted.");
-              }
-              else{
-                console.log("Account was not deleted.");
-              }
-            }
-          });
+          window.location = "../Get-Me-There/index.php"
         });
         
         $("#button").on("click", function()
