@@ -87,9 +87,6 @@ session_start();
       
     });
 
-
-      
-    }
     function onSignIn(googleUser) {
       
     var profile = googleUser.getBasicProfile();
