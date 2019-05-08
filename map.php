@@ -3,6 +3,8 @@
   {
     session_start();
     $email = ($_SESSION['email']);
+  }else{
+    $email = "";
   }
 ?>
 
@@ -14,7 +16,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/styles.css">
     <style>
-      body {
+       body {
         font-family: Arial, Helvetica, sans-serif;
         margin: 0;
       }
@@ -37,7 +39,6 @@
         float: right;
         overflow: hidden;
         font-size: 1em;
-        margin-right: 100px;
         width: 150px;
       }
       
@@ -54,7 +55,7 @@
       }
       
       .navbar a:hover, .dropdown:hover .dropbtn {
-        background-color: red;
+        background-color: purple;
       }
       
       .dropdown-content {
@@ -75,9 +76,11 @@
         text-align: left;
         
       }
-      
+      #login{
+        margin-right: 100px;
+      }
       .dropdown-content a:hover {
-        background-color: purple;
+        background-color: #ddd;
       }
       
       .dropdown:hover .dropdown-content {
@@ -161,7 +164,16 @@
     
     <div class="navbar">
       <div id="login">
-         <div class='dropdown'><button class='dropbtn'>Account<i class='fa fa-caret-down'></i></button><div class='dropdown-content'><a href='settings.php'>Settings</a><a href='signOut.php'>Sign Out</a><a href='delete.php'>Delete Account</a></div></div>
+        <div class="dropdown">
+          <button class="dropbtn">Account
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="settings.php">Settings</a>
+            <a href="api/signOut">Sign Out</a>
+            <a href="delete.php">Delete Account</a>
+          </div>
+        </div> 
       </div>
       <a href="map.php">Map</a>
       <a href="index.php">Home</a>
@@ -196,6 +208,7 @@
         </div>
       </div>
     </div>
+    
       <div id = "email"></div>
     
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -209,13 +222,8 @@
         
         document.getElementById("email").innerHTML = email;
         
-        if(document.getElementById("email").innerHTML != ""){
-          document.getElementById("email").innerHTML = email;
-          console.log("email");
-        }
-        else{
-          document.getElementById("email").innerHTML = "";
-          console.log("lol");
+        if(document.getElementById("email").innerHTML == ""){
+          document.getElementById("login").innerHTML = "<a href='signIn.php'>Sign In</a>";
         }
     </script>
     
