@@ -13,23 +13,26 @@
     return $stmt->fetchColumn();
    }
 
-    //  $options = [ 'cost' => 11 ];
-        //   $hashedPassword = password_hash($_POST['password'], PASSWORD_BCRYPT, $options);
+     $options = [ 'cost' => 11 ];
+          
 
 
     $email= $_POST["email"];
 
     if (emailExists($db,$email)) {
-        echo "found";
+        // echo "found";
+                // echo json_encode(array("successfulLogin" => true)); 
+
     }  
     else{
+        $hashedPassword = password_hash($_POST['password'], PASSWORD_BCRYPT, $options);
          $query = "INSERT into users (email, password, first_name, last_name)
-    values('".$_POST["email"]."','".$_POST["pass"]."','".$_POST["firstname"]."','".$_POST["lastname"]."')"; 
+    values('".$_POST["email"]."','".$hashedPassword."','".$_POST["firstname"]."','".$_POST["lastname"]."')"; 
      $statement = $db->prepare($query);
     $statement->execute();
     
     $records= $statement->fetchAll(PDO::FETCH_ASSOC);
-    echo json_encode($records);
+        echo json_encode(array("successfulLogin" => true)); 
       
     }
     $_SESSION["email"] = $_POST["email"];

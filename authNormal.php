@@ -18,15 +18,16 @@
         return $stmt->fetchColumn();
 
     }
-    //  $options = [ 'cost' => 11 ];
-        //   $hashedPassword = password_hash($_POST['password'], PASSWORD_BCRYPT, $options);
+   
 
 
     $email= $_POST["email"];
     $passw= $_POST["password"];
-
+       $options = [ 'cost' => 11 ];
+          $hashedPassword = password_hash($_POST['password'], PASSWORD_BCRYPT, $options);
+    
     if (emailExists($db,$email)) {
-        if(matchingPassword($db,$passw)){
+        if(matchingPassword($db,$hashedPassword)){
         echo json_encode(array("successfulLogin" => true)); 
 
 
