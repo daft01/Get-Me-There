@@ -118,6 +118,7 @@
             <button id="cancel" onclick="cancel()" class="pageButton">NO</button>
         </div>
         
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script>
             function cancel(){
                 window.location = "map.php";
