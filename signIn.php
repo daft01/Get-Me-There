@@ -146,7 +146,7 @@ session_start();
           dataType: "json",
            success: function(data, status) {
             if(data.successfulLogin){
-                window.location = "map.php";
+                window.location = "settings.php";
             }
            
             // if (data.isSignedUp) {
