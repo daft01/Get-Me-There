@@ -29,7 +29,7 @@ $("#make").change(function()
     $("#model").html("")
     var selected = $("#make").val()
     var model = selected.toLowerCase();
-   $.ajax
+  $.ajax
   ({
     type:"GET",
     url: "https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMake/" + model + "?format=json",
@@ -68,7 +68,7 @@ $("#year").change(function()
     var model = selectedModel.toLowerCase();
     var make = selectedMake.toLowerCase();
     var key1 = "MLAC6TRTY2RAC09";
-   $.ajax
+  $.ajax
 ({
     type:"GET",
     url: "https://specifications.vinaudit.com/v3/specifications?format=json&key=" + key1 + "&year=" + selectedYear + "&make=" + make + "&model=" + model + "",
@@ -126,9 +126,10 @@ $("#signupButton").on('click', function(e) {
             "phone_number": $("input[name='phone_number']").val(),
         },
         success: function(data, status) {
+            console.log("inside function    ");
             console.log(data);
             if (data.isSignedUp) {
-                window.location = "index.php";
+                 window.location = "map.php";
                 $("#message").html("Account successful");
             }
             else {
@@ -138,15 +139,9 @@ $("#signupButton").on('click', function(e) {
         },
         error: function() { 
             console.log(arguments);
-            // console.log(data);
-            // console.log("helllooooo");
-            // return alert("it doesnt work");
         },
         complete: function(data, status) { //optional, used for debugging purposes
             console.log(status);
-            // console.log(data);
-            // console.log("helllooooo");
-            // return alert("it doesnt work");
         }
     });
 })
