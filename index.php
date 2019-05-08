@@ -283,9 +283,6 @@
           document.getElementById("login").innerHTML = "<a href='signIn.php'>Sign In</a>";
         }
     </script>
-			
-
-				
 
     </body>
 </html>
