@@ -129,16 +129,13 @@ $("#signupButton").on('click', function(e) {
         success: function(data, status) {
             console.log(data);
             if (data.isSignedUp) {
-                window.location = "../index.php";
+                window.location = "Get-Me-There";
                 $("#message").html("Account successful");
             }
             else {
                 $("#message").html("Error: " + data.message);
                 $("#message").removeClass("open-hidden");
             }
-            // console.log(data.isSignedUp);
-            // console.log("helllooooo");
-            // return alert("it doesnt work");
         },
         error: function() { 
             console.log(arguments);
