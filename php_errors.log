@@ -1,9 +1,0 @@
-[08-May-2019 02:13:22 UTC] PHP Parse error:  syntax error, unexpected 'HTTP_HOST' (T_STRING), expecting ')' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 11
-[08-May-2019 02:13:22 UTC] PHP Stack trace:
-[08-May-2019 02:13:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/FinalProject/Get-Me-There/api/getTrips.php:0
-[08-May-2019 02:13:37 UTC] PHP Parse error:  syntax error, unexpected 'HTTP_HOST' (T_STRING), expecting ')' in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/dbConnection.php on line 11
-[08-May-2019 02:13:37 UTC] PHP Stack trace:
-[08-May-2019 02:13:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/FinalProject/Get-Me-There/api/car.php:0
-[08-May-2019 02:15:21 UTC] PHP Fatal error:  Call to undefined function getDBConnection() in /home/ubuntu/workspace/FinalProject/Get-Me-There/api/car.php on line 5
-[08-May-2019 02:15:21 UTC] PHP Stack trace:
-[08-May-2019 02:15:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/FinalProject/Get-Me-There/api/car.php:0
