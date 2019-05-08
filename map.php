@@ -139,7 +139,7 @@
         margin: 5px;
       }
         .yellow{
-            color: yellow;
+            color: #EAB01C;
         }
         
         .trip{
