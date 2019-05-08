@@ -177,6 +177,7 @@
       </div>
       <a href="map.php">Map</a>
       <a href="index.php">Home</a>
+      <img class="logoImg" src="images/logoWhite.png" style="width:160px; height:65px;"> 
     </div>
 
     <div id="container">
