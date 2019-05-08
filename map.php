@@ -206,7 +206,17 @@
     
     <script >
         var email = "<?php echo $email?>";
+        
         document.getElementById("email").innerHTML = email;
+        
+        if(document.getElementById("email").innerHTML != ""){
+          document.getElementById("email").innerHTML = email;
+          console.log("email");
+        }
+        else{
+          document.getElementById("email").innerHTML = "";
+          console.log("lol");
+        }
     </script>
     
   </body>
