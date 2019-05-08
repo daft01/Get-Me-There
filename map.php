@@ -167,6 +167,10 @@
             flex-basis: 25%;
             flex-grow: 0;
         }
+        #optionsContainer{
+           font-family: 'Open Sans Condensed', sans-serif;
+
+        }
         /*#des,#origin,#addTrip{*/
         /*  font-family: 'Open Sans Condensed', sans-serif;*/
 
