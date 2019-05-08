@@ -4,15 +4,29 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Settings</title>
   
+  
+  <link rel="stylesheet" href="css/setting.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
-  <link rel="stylesheet" href="css/setting.css">
   <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
   
 </head>
 
 <body id="dummybodyid">
-  
+    <div id="navbar">
+      <div id="dropdown">
+        <button id="dropbtn">Account
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div id="dropdown-content">
+          <a href="#">Settings</a>
+          <a href="#">Sign Out</a>
+          <a href="#">Delete Account</a>
+        </div>
+      </div> 
+      <a href="map.php">Map</a>
+      <a href="index.php">Home</a>
+    </div>
 
     <div id="container">
       <form>
