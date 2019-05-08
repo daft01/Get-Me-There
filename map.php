@@ -108,7 +108,7 @@
           font-size: .5em;
         color: black;
         margin-left: 10px;
-          height: 1000px;
+          height: 4000px;
       }
       #tripTitle{
         width: 100%;
@@ -139,7 +139,7 @@
         margin: 5px;
       }
         .yellow{
-            color: #EAB01C;
+            color: #00ad02;
         }
         
         .trip{
