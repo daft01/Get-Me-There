@@ -167,11 +167,11 @@
             flex-basis: 25%;
             flex-grow: 0;
         }
-        #des,#origin,#addTrip{
-          font-family: 'Open Sans Condensed', sans-serif;
+        /*#des,#origin,#addTrip{*/
+        /*  font-family: 'Open Sans Condensed', sans-serif;*/
 
           
-        }
+        /*}*/
     </style>
   </head>
   <body>
@@ -196,13 +196,13 @@
 
     <div id="container">
       <div id="locations">
-         <label id ="origin" for="origin">Origin: </label>
+         <label for="origin">Origin: </label>
         <input class="form-control" id="origin" type="text" placeholder="Current Location">
   
-        <label id ="des" for="destination">Destination: </label>
+        <label for="destination">Destination: </label>
         <input class="form-control" id="destination" type="text" placeholder="Search">
           
-        <button id ="addTrip"id="addTrip" onclick="addTripClicked()">Add to trips</button>
+        <button onclick="addTripClicked()">Add to trips</button>
       
       <div id="mapContainer">
         <div>
