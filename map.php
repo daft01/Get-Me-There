@@ -223,7 +223,10 @@
         document.getElementById("email").innerHTML = email;
         
         if(document.getElementById("email").innerHTML == ""){
+          console.log("empty");
           document.getElementById("login").innerHTML = "<a href='signIn.php'>Sign In</a>";
+        }else{
+          console.log("email");
         }
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
