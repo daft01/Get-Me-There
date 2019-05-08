@@ -161,7 +161,7 @@
     
     <div class="navbar">
       <div id="login">
-         <div class='dropdown'><button class='dropbtn'>Account<i class='fa fa-caret-down'></i></button><div class='dropdown-content'><a href='settings.php'>Settings</a><a href='index.php'>Sign Out</a><a href='delete.php'>Delete Account</a></div></div>
+         <div class='dropdown'><button class='dropbtn'>Account<i class='fa fa-caret-down'></i></button><div class='dropdown-content'><a href='settings.php'>Settings</a><a href='signOut.php'>Sign Out</a><a href='delete.php'>Delete Account</a></div></div>
       </div>
       <a href="map.php">Map</a>
       <a href="index.php">Home</a>
@@ -199,6 +199,8 @@
       <div id = "email">
       <?= $email ?>
     </div>
+    
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0vzljkSDp7Hk3CWIytTfZJEM8jS-UooU&libraries=places"></script>
