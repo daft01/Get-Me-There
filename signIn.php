@@ -117,7 +117,26 @@ session_start();
           url: "auth.php",
           data: { "email": profile.getEmail(),"firstname":fN, "lastname":lN, "pass" :profile.getId() },
           success: function(){},
-          dataType: "json"
+          dataType: "json",
+           success: function(data, status) {
+            if(data.successfulLogin){
+                window.location = "index.php";
+
+            }
+           
+            // if (data.isSignedUp) {
+            //     window.location = "../Get-Me-There/index.php";
+            //     $("#message").html("Account successful");
+            // }
+            // else {
+            //     $("#message").html("Error: " + data.message);
+            //     $("#message").removeClass("open-hidden");
+            // }
+            // console.log(data.isSignedUp);
+            // console.log("helllooooo");
+            // return alert("it doesnt work");
+        }
+      
           
     });
         

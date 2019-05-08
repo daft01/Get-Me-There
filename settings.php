@@ -22,7 +22,7 @@
         <a class="nav-link" style="font-family: 'Source Serif Pro', serif; font-size:1.6em;" href="index.php">Map</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active"  style="font-family: 'Source Serif Pro', serif; font-size:1.6em;"href="sittings.php" id="blue">Settings</a>
+        <a class="nav-link active"  style="font-family: 'Source Serif Pro', serif; font-size:1.6em;"href="settings.php" id="blue">Settings</a>
       </li>
       <li class="nav-item">
         <a class="nav-link"  style="font-family: 'Source Serif Pro', serif; font-size:1.6em;"href="signIn.php">Sign In</a>
@@ -201,7 +201,7 @@
             {
               console.log(data);
               if(data){
-                window.location = "../Get-Me-There/index.html";
+                window.location = "index.php";
                 console.log("Account deleted.");
               }
               else{
