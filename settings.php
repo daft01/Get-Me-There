@@ -1,4 +1,12 @@
-
+<?php
+  if(!isset($_SESSION))
+  {
+    session_start();
+    $email = ($_SESSION['email']);
+  }else{
+    $email = "";
+  }
+?>
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -187,7 +195,7 @@
         {
           window.location = "../Get-Me-There/index.php"
         });
-        
+        var email = "<?php echo $email?>";
         $("#button").on("click", function()
         {
           $.ajax
@@ -202,6 +210,7 @@
                "make": make,
                "model": model,
                "year": $("#year").val(),
+               "email":email,
             },
             success:function(data, status)
             {
