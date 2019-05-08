@@ -204,7 +204,12 @@ function setOption( option ){
                       email : "dm93927@gmail.com"
                     },
                     success: function (data) {
-                      console.log(data);
+                        
+                        var num = info["distance"]["value"] / ( data[0]["highway"] + data[0]["city"] /2 );
+                        var n = num.toFixed(2);
+                        var cost = document.createElement('div');
+                        cost.innerHTML = "<strong>Cost: </strong> $" + n;
+                        document.getElementById(option).appendChild(cost);
                     },
                     error: function(err) {
                         console.log(arguments);
