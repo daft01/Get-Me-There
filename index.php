@@ -176,6 +176,10 @@
         justify-content: center;
 
       }
+      .logoImg{
+        padding-left: 20px;
+
+      }
         </style>
         
         <meta charset="utf-8">
@@ -190,12 +194,22 @@
     </head>
     <body>
       
-         <div class="navbar">
+     <div class="navbar">
       <div id="login">
-         <div class='dropdown'><button class='dropbtn'>Account<i class='fa fa-caret-down'></i></button><div class='dropdown-content'><a href='settings.php'>Settings</a><a href='signOut.php'>Sign Out</a><a href='delete.php'>Delete Account</a></div></div>
+        <div class="dropdown">
+          <button class="dropbtn">Account
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="settings.php">Settings</a>
+            <a href="api/signOut">Sign Out</a>
+            <a href="delete.php">Delete Account</a>
+          </div>
+        </div> 
       </div>
       <a href="map.php">Map</a>
       <a href="index.php">Home</a>
+      <img class="logoImg" src="images/logoWhite.png" style="width:160px; height:65px;"> 
     </div>
     
 
@@ -258,11 +272,17 @@
     </div>
 </div>
 
-
-  
-			
-
-				
+ <div id = "email"></div>
+ 
+  <script >
+        var email = "<?php echo $email?>";
+        
+        document.getElementById("email").innerHTML = email;
+        
+        if(document.getElementById("email").innerHTML == ""){
+          document.getElementById("login").innerHTML = "<a href='signIn.php'>Sign In</a>";
+        }
+    </script>
 
     </body>
 </html>

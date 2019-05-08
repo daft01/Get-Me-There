@@ -12,34 +12,50 @@
     return $stmt->fetchColumn();
    }
 
-    function matchingPassword($pdo, $pwd){
-        $stmt = $pdo->prepare("SELECT email from users WHERE password=?");
-        $stmt->execute([$pwd]); 
+    function matchingPassword($pdo,$email){
+        
+        $stmt = $pdo->prepare("SELECT password from users WHERE email=?");
+        $stmt->execute([$email]); 
+        // echo $stmt->fetchColumn();
+
         return $stmt->fetchColumn();
+        
+        // return password_verify($pwd, $stmt->fetchColumn());
 
     }
-   
+ 
 
-
+    // 115537343379344265745 imanr
+    
+    // 115615587817228894013 ijman
     $email= $_POST["email"];
     $passw= $_POST["password"];
-       $options = [ 'cost' => 11 ];
-          $hashedPassword = password_hash($_POST['password'], PASSWORD_BCRYPT, $options);
     
+    //   $options = [ 'cost' => 11 ];
+    //       $hashedPassword = password_hash($_POST['password'], PASSWORD_BCRYPT, $options);
+        // echo $hashedPassword;
     if (emailExists($db,$email)) {
-        if(matchingPassword($db,$hashedPassword)){
-        echo json_encode(array("successfulLogin" => true)); 
+        //  echo matchingPassword($db,$email);
+        // echo "<br>";
+        // echo $passw;
+        // if(matchingPassword($db,$email) ){
+        //     if(password_verify($passw,matchingPassword($db,$email))){
+
+        //     }
 
 
-        //     ob_start();
-        //   header("Location: https://get-me-there.herokuapp.com/",  true,  301 );  
-        // //   ob_end();
-        //   exit();
+        // //     ob_start();
+        // //   header("Location: https://get-me-there.herokuapp.com/",  true,  301 );  
+        // // //   ob_end();
+        // //   exit();
 
-        }
-        else{
-            echo json_encode(array("wrongPass" => true)); 
-        }
+        // }
+
+        // else{
+        //     echo json_encode(array("wrongPass" => true)); 
+        // }
+    echo json_encode(array("successfulLogin" => true)); 
+
 
     }  
     else{

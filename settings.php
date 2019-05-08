@@ -1,18 +1,44 @@
-
+<?php
+  if(!isset($_SESSION))
+  {
+    session_start();
+    $email = ($_SESSION['email']);
+  }else{
+    $email = "";
+  }
+?>
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Settings</title>
   
+  
+  <link rel="stylesheet" href="css/setting.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
-  <link rel="stylesheet" href="css/setting.css">
   <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
   
 </head>
 
 <body id="dummybodyid">
   
+    <div class="navbar">
+      <div id="login">
+        <div class="dropdown">
+          <button class="dropbtn">Account
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="settings.php">Settings</a>
+            <a href="api/signOut">Sign Out</a>
+            <a href="delete.php">Delete Account</a>
+          </div>
+        </div> 
+      </div>
+      <a href="map.php">Map</a>
+      <a href="index.php">Home</a>
+      <img class="logoImg" src="images/logoWhite.png" style="width:160px; height:65px;"> 
+    </div>
 
     <div id="container">
       <form>
@@ -50,6 +76,15 @@
       
   </div>
   
+  <script >
+        var email = "<?php echo $email?>";
+        
+        document.getElementById("email").innerHTML = email;
+        
+        if(document.getElementById("email").innerHTML == ""){
+          document.getElementById("login").innerHTML = "<a href='signIn.php'>Sign In</a>";
+        }
+    </script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -173,7 +208,7 @@
         {
           window.location = "../Get-Me-There/index.php"
         });
-        
+        var email = "<?php echo $email?>";
         $("#button").on("click", function()
         {
           $.ajax
@@ -188,6 +223,7 @@
                "make": make,
                "model": model,
                "year": $("#year").val(),
+               "email":email,
             },
             success:function(data, status)
             {
