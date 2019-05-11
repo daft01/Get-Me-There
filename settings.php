@@ -1,7 +1,9 @@
 <?php
+  session_start();
   if(isset($_SESSION))
   {
-    session_start();
+    
+    echo ($_SESSION['email']);
     $email = ($_SESSION['email']);
   }else{
     $email = "";
@@ -80,7 +82,7 @@
         var make;
         var city;
         var highway;
-        var email = '<%=Session["email"]%>'
+        
         
         
         $(document).ready(function()
@@ -196,6 +198,7 @@
           window.location = "/map.php";
         });
         var email = "<?php echo $email?>";
+        console.log(email);
         $("#button").on("click", function()
         {
           $.ajax
