@@ -12,7 +12,7 @@
     
     if(isset( $_SESSION['email']))
     {
-        $sql = "DELETE FROM `user` WHERE email = '" . $_SESSION['email'] ."'";
+        $sql = "DELETE FROM `users` WHERE email = '" . $_SESSION['email'] ."'";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         session_destroy();
