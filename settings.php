@@ -59,7 +59,7 @@
           <div id="email" style="display:none;">
             
           </div>
-          <span class="badge badge-success id="success">status: </span>
+          <span class="label label-success"id="success">status: </span>
             
         </fieldset>
       </form>

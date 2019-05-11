@@ -180,6 +180,10 @@
         padding-left: 20px;
 
       }
+      #records{
+        text-align: center;
+        font-size: 1em;
+      }
         </style>
         
         <meta charset="utf-8">
@@ -212,7 +216,7 @@
       <img class="logoImg" src="images/logoWhite.png" style="width:160px; height:65px;"> 
     </div>
     
-
+  
 	<!--<div class ="bigContainer">-->
 	<!--	<div class="main_slider_item_bg" style="background-image:url(images/taxis.jpg)"></div>-->
 	<!--		<div class="main_slider_shapes"><img src="images/taxis.jpg" alt="" style="width: 100% !important;"></div>-->
@@ -226,6 +230,12 @@
   
     <div class ="slogan" style="width:70%;">A better way for transportation</div>
 	  </div>
+	  
+	  <div id="records">
+     Records<br>
+  </div>
+
+
 	  <br><br><br>
   <div class="underM">
     <div class="weAre" style="width:100%; height:100%">
@@ -240,6 +250,7 @@
     </div>
     
   </div>
+
   
   <div class="middleMiss">
     <div class="idea">
@@ -274,6 +285,7 @@
 
  <div id="email"></div>
  
+ <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script >
         var email = "<?php echo $email?>";
         
@@ -284,6 +296,64 @@
           document.getElementById("login").innerHTML = "<a href='signIn.php'>Sign In</a>";
           
         }
+        
+    var s = "";
+    $.ajax({
+        type: "GET",
+        url: "api/getAllRecords.php",
+        dataType: "json",
+        data: {},
+        success: function (data) {
+          
+          var r = document.createElement("p");
+          r.innerHTML = "Total of records: " + data.length;
+          document.getElementById("records").appendChild(r);
+          console.log(data);
+        },
+        error: function(err) {
+            console.log(arguments);
+        }
+    });
+    
+    $.ajax({
+        type: "GET",
+        url: "api/getAllUsers.php",
+        dataType: "json",
+        data: {},
+        success: function (data) {
+          
+          var r = document.createElement("p");
+          r.innerHTML = "Total of Users: " + data.length;
+          document.getElementById("records").appendChild(r);
+         
+          console.log(data);
+        },
+        error: function(err) {
+            console.log(arguments);
+        }
+    });
+    
+    $.ajax({
+        type: "GET",
+        url: "api/getAllTrips.php",
+        dataType: "json",
+        data: {},
+        success: function (data) {
+          
+          var r = document.createElement("p");
+          r.innerHTML = "Total of Trips: " + data.length;
+          document.getElementById("records").appendChild(r);
+          console.log(data);
+          console.log(data);
+        },
+        error: function(err) {
+            console.log(arguments);
+        }
+    });
+    
+    var r = document.createElement("p");
+    r.innerHTML = s;
+    document.getElementById("records").appendChild(r);
     </script>
 
     </body>
