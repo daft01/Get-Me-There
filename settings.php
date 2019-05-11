@@ -59,7 +59,7 @@
           <div id="email" style="display:none;">
             
           </div>
-          <span class="badge badge-success id="success">status: </span>
+          <span class="badge badge-success" id="success">status: </span>
             
         </fieldset>
       </form>
@@ -218,10 +218,11 @@
             },
             success:function(data, status)
             {
+              
             } ,
             complete:function(data)
             {
-              $("#success").html("Status:Update Success");
+              $("#success").html("Status: Update Success");
               console.log("Update Success");
             }
           });
