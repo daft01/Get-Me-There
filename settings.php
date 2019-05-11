@@ -218,13 +218,11 @@
             },
             success:function(data, status)
             {
-              $("#success").html("Status:Update Success");
-              console.log("Update Success");
             } ,
             complete:function(data)
             {
               $("#success").html("Status:Update Success");
-              console.log("Update Success failed");
+              console.log("Update Success");
             }
           });
         });
