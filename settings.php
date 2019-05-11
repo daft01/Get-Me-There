@@ -4,7 +4,7 @@
     session_start();
     $email = ($_SESSION['email']);
   }else{
-    $email = "hello123@gmail.com";
+    $email = "";
   }
 ?>
 
@@ -80,6 +80,8 @@
         var make;
         var city;
         var highway;
+        var email = '<%=Session["email"]%>'
+        
         
         $(document).ready(function()
         {
@@ -208,10 +210,11 @@
                "make": make,
                "model": model,
                "year": $("#year").val(),
-               "email":document.getElementById('email').innerHTML,
+               "email":email,
             },
             success:function(data, status)
             {
+              
                 
             } ,
             
