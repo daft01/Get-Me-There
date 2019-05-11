@@ -272,7 +272,7 @@
     </div>
 </div>
 
- <div id = "email"></div>
+ <div id="email"></div>
  
   <script >
         var email = "<?php echo $email?>";
@@ -280,7 +280,9 @@
         document.getElementById("email").innerHTML = email;
         
         if(document.getElementById("email").innerHTML == ""){
+          
           document.getElementById("login").innerHTML = "<a href='signIn.php'>Sign In</a>";
+          
         }
     </script>
 
