@@ -134,7 +134,7 @@ function checkRoute(){
         url: "api/addRecord.php",
         dataType: "json",
         data: {
-          email : "dm93927@gmail.com",
+          email : document.getElementById("email").innerHTML,
           origin : originName,
           destination : destinationName
         },
@@ -194,6 +194,7 @@ function setOption( option ){
             distance.innerHTML = "<strong>Distance: </strong>" + info["distance"]["text"]
             document.getElementById(option).appendChild(distance);
             
+            
             if(option == "DRIVING"){
                 
                 $.ajax({
@@ -201,7 +202,7 @@ function setOption( option ){
                     url: "api/getInfo.php",
                     dataType: "json",
                     data: {
-                      email : "dm93927@gmail.com"
+                      email : document.getElementById("email").innerHTML
                     },
                     success: function (data) {
                         
@@ -263,8 +264,6 @@ function setRoutes(route){
 
 function addTripClicked(){
     
-    console.log(email);
-    
     if( document.getElementById("email").innerHTML == "" ){
         alert("You need to be sign in to save a trip");
     }
@@ -283,7 +282,7 @@ function addTripClicked(){
         url: "api/addTrip.php",
         dataType: "json",
         data: {
-          email : "dm93927@gmail.com",
+          email : document.getElementById("email").innerHTML,
           origin : originName,
           destination : destinationName
         },
@@ -303,7 +302,7 @@ $.ajax({
     url: "api/getTrips.php",
     dataType: "json",
     data: {
-      email : "dm93927@gmail.com"
+      email : document.getElementById("email").innerHTML
     },
     success: function (data) {
       for(var i=0; i<data.length; i++){
