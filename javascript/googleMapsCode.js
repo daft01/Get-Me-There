@@ -297,24 +297,26 @@ function addTripClicked(){
     });
 }
 
-$.ajax({
-    type: "GET",
-    url: "api/getTrips.php",
-    dataType: "json",
-    data: {
-      email : document.getElementById("email").innerHTML
-    },
-    success: function (data) {
-      for(var i=0; i<data.length; i++){
-          
-        var trip = document.createElement('div');
-        trip.setAttribute("class", "trip");
-        trip.innerHTML = "<div class='tripLocation'> <span class=yellow> From: </span> " + data[i]["origin"] + "</div>" + "<div class='tripLocation'> <span class=yellow> To: </span>  " + data[i]["destination"] + "</div>";
-        
-        document.getElementById("trips").appendChild(trip);
-      }
-    },
-    error: function(err) {
-        console.log(arguments);
-    }
-});
+if(document.getElementById("email").innerHTML != ""){
+    $.ajax({
+        type: "GET",
+        url: "api/getTrips.php",
+        dataType: "json",
+        data: {
+          email : document.getElementById("email").innerHTML
+        },
+        success: function (data) {
+          for(var i=0; i<data.length; i++){
+              
+            var trip = document.createElement('div');
+            trip.setAttribute("class", "trip");
+            trip.innerHTML = "<div class='tripLocation'> <span class=yellow> From: </span> " + data[i]["origin"] + "</div>" + "<div class='tripLocation'> <span class=yellow> To: </span>  " + data[i]["destination"] + "</div>";
+            
+            document.getElementById("trips").appendChild(trip);
+          }
+        },
+        error: function(err) {
+            console.log(arguments);
+        }
+    });
+}
