@@ -266,6 +266,7 @@ function addTripClicked(){
     
     if( document.getElementById("email").innerHTML == "" ){
         alert("You need to be sign in to save a trip");
+        return;
     }
     
     if( !originValid || !destinationValid)
