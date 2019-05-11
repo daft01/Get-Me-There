@@ -38,22 +38,22 @@
         //  echo matchingPassword($db,$email);
         // echo "<br>";
         // echo $passw;
-        // if(matchingPassword($db,$email) ){
-        //     if(password_verify($passw,matchingPassword($db,$email))){
+        if(matchingPassword($db,$email) ){
+            if(password_verify($passw,matchingPassword($db,$email))){
 
-        //     }
+            }
 
 
-        // //     ob_start();
-        // //   header("Location: https://get-me-there.herokuapp.com/",  true,  301 );  
-        // // //   ob_end();
-        // //   exit();
+        //     ob_start();
+        //   header("Location: https://get-me-there.herokuapp.com/",  true,  301 );  
+        // //   ob_end();
+        //   exit();
 
-        // }
+        }
 
-        // else{
-        //     echo json_encode(array("wrongPass" => true)); 
-        // }
+        else{
+            echo json_encode(array("wrongPass" => true)); 
+        }
     echo json_encode(array("successfulLogin" => true)); 
 
 

@@ -134,7 +134,7 @@ function checkRoute(){
         url: "api/addRecord.php",
         dataType: "json",
         data: {
-          email : "dm93927@gmail.com",
+          email : document.getElementById("email").innerHTML,
           origin : originName,
           destination : destinationName
         },
@@ -194,6 +194,7 @@ function setOption( option ){
             distance.innerHTML = "<strong>Distance: </strong>" + info["distance"]["text"]
             document.getElementById(option).appendChild(distance);
             
+            
             if(option == "DRIVING"){
                 
                 $.ajax({
@@ -201,7 +202,7 @@ function setOption( option ){
                     url: "api/getInfo.php",
                     dataType: "json",
                     data: {
-                      email : "dm93927@gmail.com"
+                      email : document.getElementById("email").innerHTML
                     },
                     success: function (data) {
                         
@@ -263,6 +264,11 @@ function setRoutes(route){
 
 function addTripClicked(){
     
+    if( document.getElementById("email").innerHTML == "" ){
+        alert("You need to be sign in to save a trip");
+        return;
+    }
+    
     if( !originValid || !destinationValid)
         alert("Locations not valid");
     
@@ -277,7 +283,7 @@ function addTripClicked(){
         url: "api/addTrip.php",
         dataType: "json",
         data: {
-          email : "dm93927@gmail.com",
+          email : document.getElementById("email").innerHTML,
           origin : originName,
           destination : destinationName
         },
@@ -292,24 +298,26 @@ function addTripClicked(){
     });
 }
 
-$.ajax({
-    type: "GET",
-    url: "api/getTrips.php",
-    dataType: "json",
-    data: {
-      email : "dm93927@gmail.com"
-    },
-    success: function (data) {
-      for(var i=0; i<data.length; i++){
-          
-        var trip = document.createElement('div');
-        trip.setAttribute("class", "trip");
-        trip.innerHTML = "<div class='tripLocation'> <span class=yellow> From: </span> " + data[i]["origin"] + "</div>" + "<div class='tripLocation'> <span class=yellow> To: </span>  " + data[i]["destination"] + "</div>";
-        
-        document.getElementById("trips").appendChild(trip);
-      }
-    },
-    error: function(err) {
-        console.log(arguments);
-    }
-});
+if(document.getElementById("email").innerHTML != ""){
+    $.ajax({
+        type: "GET",
+        url: "api/getTrips.php",
+        dataType: "json",
+        data: {
+          email : document.getElementById("email").innerHTML
+        },
+        success: function (data) {
+          for(var i=0; i<data.length; i++){
+              
+            var trip = document.createElement('div');
+            trip.setAttribute("class", "trip");
+            trip.innerHTML = "<div class='tripLocation'> <span class=yellow> From: </span> " + data[i]["origin"] + "</div>" + "<div class='tripLocation'> <span class=yellow> To: </span>  " + data[i]["destination"] + "</div>";
+            
+            document.getElementById("trips").appendChild(trip);
+          }
+        },
+        error: function(err) {
+            console.log(arguments);
+        }
+    });
+}

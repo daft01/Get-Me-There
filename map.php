@@ -6,7 +6,6 @@
     $email = ($_SESSION['email']);
   }else{
     $email = "";
-    //header("Location: login.html");
   }
 ?>
 
@@ -247,8 +246,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0vzljkSDp7Hk3CWIytTfZJEM8jS-UooU&libraries=places"></script>
     <script type="text/javascript" src="javascript/googleMapsCode.js"></script>
-    
-    
     
   </body>
 </html>
