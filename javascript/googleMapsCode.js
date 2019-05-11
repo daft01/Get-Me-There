@@ -16,8 +16,6 @@ var originSearchBox = new google.maps.places.SearchBox(originInput);
 
 var markers = [];
 
-var email = "<?php echo $email?>";
-
 var options = { 
     center: {lat: 37.791350, lng: -122.435883},
     zoom: 14,
@@ -266,7 +264,6 @@ function setRoutes(route){
 function addTripClicked(){
     
     console.log(email);
-
     
     if( document.getElementById("email").innerHTML == "" ){
         alert("You need to be sign in to save a trip");
