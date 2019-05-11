@@ -21,7 +21,7 @@
 
     if (emailExists($db,$email)) {
         // echo "found";
-                // echo json_encode(array("successfulLogin" => true)); 
+                echo json_encode(array("successfulLogin" => true)); 
 
     }  
     else{
