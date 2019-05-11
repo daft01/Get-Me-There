@@ -4,7 +4,7 @@
     session_start();
     $email = ($_SESSION['email']);
   }else{
-    $email = "";
+    $email = "hello123@gmail.com";
   }
 ?>
 
@@ -64,7 +64,7 @@
   </div>
   
   <script >
-          var email = "<?php echo $email?>";
+          var email = "<?php echo $email;?>";
           
         document.getElementById("email").innerHTML = email;
         
