@@ -59,7 +59,11 @@
           <div id="email" style="display:none;">
             
           </div>
+<<<<<<< HEAD
           <span class="label label-success"id="success">status: </span>
+=======
+          <span class="badge badge-success" id="success">status: </span>
+>>>>>>> ff5070412d300509981c5b2bb242d1a520f37046
             
         </fieldset>
       </form>
@@ -218,13 +222,12 @@
             },
             success:function(data, status)
             {
-              $("#success").html("Status:Update Success");
-              console.log("Update Success");
+              
             } ,
             complete:function(data)
             {
-              $("#success").html("Status:Update Success");
-              console.log("Update Success failed");
+              $("#success").html("Status: Update Success");
+              console.log("Update Success");
             }
           });
         });
