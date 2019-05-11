@@ -1,9 +1,6 @@
 <?php
-  session_start();
-?>
-
-<?php
     include 'dbConnection.php';
+    session_start();
     
     header("Access-Control-Allow-Origin: *");
     header("Content-Type: application/json");
